@@ -22,6 +22,8 @@ In Mosatic, users will be able to:
   - https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/
 - Three JS
   - https://threejs.org/
+- Audio Effects
+  - https://www.npmjs.com/package/audio-effects
 
 # Timeline:
 
