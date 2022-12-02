@@ -15,3 +15,39 @@ In Mosatic, users will be able to:
 
 # Wireframe:
 ![Rough Wireframe](https://github.com/haeuncreative/mosatic/blob/master/js_rough_wf.png?raw=true)
+
+# Tech/Libraries/APIs
+
+- Web Audio API
+  - https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/
+- Three JS
+  - https://threejs.org/
+
+# Timeline:
+
+- Friday
+  - Setting Up Logic/Event Handlers
+- Saturday
+  - Setting Up Recording/Playback Logic
+  - Making sure sounds and graphics can overlap
+- Sunday
+  - Canvas animation logic  
+  - Debugging
+  - Making sure everything is working thus far.
+- Monday
+  - Sound creation 
+    - Chords and Percussive Textures
+  - Verify everything is going smoothly
+  - Debug if need to
+  - See if sounds overlap without oversaturating gain
+- Tuesday
+  - CSS and implementing animation
+  - Testing everything
+- Wednesday
+  - Final testing
+    - Double/triple check everything
+    - Abuse all the controls to make sure there's no bugs
+    - Make sure it's all visually pleasing.
+- Thursday
+  - If need be, do last checks, little tweaks before presenting.
+
