@@ -24,6 +24,8 @@ In Mosatic, users will be able to:
   - https://threejs.org/
 - Audio Effects
   - https://www.npmjs.com/package/audio-effects
+- Keyboard Event
+  - https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code
 
 # Timeline:
 
