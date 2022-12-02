@@ -14,4 +14,4 @@ In Mosatic, users will be able to:
 - They will be able to layer sounds and animations.
 
 # Wireframe:
-![Rough Wireframe](https://github.com/haeuncreative/mosatic/blob/main/js_rough_wf.png?raw=true)
+![Rough Wireframe](https://github.com/haeuncreative/mosatic/blob/master/js_rough_wf.png?raw=true)
