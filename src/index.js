@@ -8,28 +8,121 @@ const track = audioContext.createMediaElementSource(audioElement);
 
 const playButton = document.querySelector("button");
 
-playButton.addEventListener(
-  "click",
-  () => {
-    // Check if context is in suspended state (autoplay policy)
-    if (audioContext.state === "suspended") {
-      audioContext.resume();
-    }
+// okay so first, we need a key down handler that tracks
+// 1. the audio mapped to each key
+// 2. the animation mapped to each key
+// 3. it exports it to a separate array or object that keeps track of
+// which key pressed and duration between keystrokes 
+// 4. if held down, it continually restarts playback, like a little stutter function (auto-repeat)
+// 
 
-    // Play or pause track depending on state
-    if (playButton.dataset.playing === "false") {
-      audioElement.play();
-      playButton.dataset.playing = "true";
-    } else if (playButton.dataset.playing === "true") {
-      audioElement.pause();
-      playButton.dataset.playing = "false";
-    }
+// key = document.querySelector() ideally key... will need to do some more research
 
-    let state = this.getAttribute('aria-checked') === "true" ? true : false;
-    this.setAttribute('aria-checked', state ? "false" : "true" );
+// function pressKey(e) {
+  
+// }
 
-  },
-  false
-);
+const recorded = {} // this will have the various keys and their attr, like time/order(?)
+
+window.addEventListener('keydown', (event) => {
+  
+
+
+  switch(event.code) {
+    case "KeyQ":
+      console.log("Hiya!")
+      break;
+      
+    case "KeyW":
+      break;
+
+    case "KeyE":
+      break;
+
+    case "KeyR":
+      break;
+
+    case "KeyT":
+      break;
+
+    case "KeyY":
+      break;
+
+    case "KeyU":
+      break;
+
+    case "KeyI":
+      break;
+
+    case "KeyO":
+      break;
+
+    case "KeyP":
+      break;
+
+    case "KeyA":
+      break;
+
+    case "KeyS":
+      break;
+
+    case "KeyD":
+      break;
+
+    case "KeyF":
+      break;
+
+    case "KeyG":
+      break;
+
+    case "KeyH":
+      break;
+
+    case "KeyJ":
+      break;
+
+    case "KeyK":
+      break;
+
+    case "KeyL":
+      break;
+
+    case "KeyZ":
+      break;
+
+    case "KeyX":
+      break;
+
+    case "KeyC":
+      break;
+
+    case "KeyV":
+      break;
+
+    case "KeyB":
+      break;
+
+    case "KeyN":
+      break;
+
+    case "KeyM":
+      break;
+  }
+
+})
+
+
+
+
+// second, key up handler (?)
+// not sure if i'd need a key up...
+
+
+// third, recording handler
+// includes play, pause, stop, and of course record functions
+
+// fourth, reverb functions
+
+
 
 track.connect(audioContext.destination);
