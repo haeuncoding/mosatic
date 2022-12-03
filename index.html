@@ -7,33 +7,34 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./dist/main.css" />
     <script src="./dist/main.js"></script>
+    
     <title>mosatic</title>
+    <audio controls src="./sounds/Sound_1.wav" id="sound-1" type="audio/wav">
+    </audio>
+
+
 </head>
 
 <body>
-<h2>mosatic</h2>
+<!-- <h2>mosatic</h2> -->
+<canvas width="1920" height="1080"></canvas>
 
-<form action="">
+
+<!-- <form action="">
 
 <label for="key-input">
     Key Input
 </label>
-
-<input type="text" id="key-input">
-
-
-<!-- the rec button should kind of be a submit button? -->
-</form>
-
-
 <figure>
-    <figcaption>play the damn thing</figcaption>
-    <audio controls src="./sounds/Sound_1.wav" id="sound-1" crossorigin="anonymous"></audio>
-</figure>
-<!-- <audio src="./sounds/Sound_1.wav" id="sound-1" crossorigin="anonymous"></audio>
-<button data-playing="false" role="switch" aria-checked="false">
-    <span>Play/Pause</span>
-</button> -->
+    
+    <input onkeydown="keyDownFunction()" onkeyup="keyUpFunction()" id="key-input">
+
+    <!-- <input type="submit"> -->
+<!-- the rec button should kind of be a submit button? -->
+
+<script src="./src/index.js"></script>
+
+
 </body>
 
 </html>
