@@ -1,10 +1,3 @@
-  const audioContextQ = new AudioContext()
-    const qSource = document.querySelector('#Q-id')
-    console.log(qSource instanceof HTMLAudioElement)
-    const qSound = audioContextQ.createMediaElementSource(qSource);
-    console.log('im dying')
-    qSound.connect(audioContextQ.destination)
-
 class keyDownHandler {
     constructor(){
     this.keys = [];

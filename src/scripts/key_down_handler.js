@@ -1,31 +1,31 @@
+import AudioBank from './audio_bank.js'
+import AniBank from './ani_bank.js'
+let CONSTANTS = {
+    KEY_ALPHABET: Array.from('QWERTYUIOPASDFGHJKLZXCVBNM')
+    // KEY_ALPHABET: Array.from('Q')
+    
+}
+
 export default class KeyDownHandler {
     constructor(){
         this.keys = [];
-        this.addSoundBank()
+        this.keyAudioBank = new AudioBank
+        // this.createAudioBank(CONSTANTS.KEY_ALPHABET)
         this.addListeners()
+        this.keyAniBank = new AniBank
     }
 
-    addSoundBank () {
-        const audioContextQ = new AudioContext()
-        const qSource = document.querySelector('#Q-id')
-        const qSound = audioContextQ.createMediaElementSource(qSource);
-        qSound.connect(audioContextQ.destination)
+    createAudioBank (array) {
+        this.keyAudioBank.createGenBank(array)
     }
 
     addListeners () {
 
-      const audioContextQ = new AudioContext()
-      console.log(audioContextQ instanceof AudioContext)
-      const qSource = document.querySelector('#Q-id')
-      console.log(qSource instanceof HTMLMediaElement)
-      const qSound = audioContextQ.createMediaElementSource(qSource);
-      console.log(qSound instanceof MediaElementAudioSourceNode)
-      qSound.connect(audioContextQ.destination)
     window.addEventListener('keydown', e => {
         console.log(e.code)
         switch(e.code) {
         case "KeyQ":
-            qSound.play()
+
         break;
         
         case "KeyW":

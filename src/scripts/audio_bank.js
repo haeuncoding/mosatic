@@ -1,7 +1,6 @@
-class AudioBank {
+export default class AudioBank {
     constructor () {
-        this.createBank()
-        this.audioBank = {}
+        this.genAudioBank = {}
     }
     
     // okay, thought process, i do a create bank method that
@@ -9,17 +8,137 @@ class AudioBank {
     // then i access each one using a method i.e. AudioBank.playQ and etc.
     // i'll make an object containing: object[key] = {context: context, 
     // source: source, sound: sound}
-    createBank () {
-        const keyAlphabet = Array.from('QWERTYUIOPASDFGHJKLZXCVBNM')
-            keyAlphabet.forEach(letter => {
-                this.audioBank[letter] = {
-                    ctx: `audioContext${letter}` = newAudioContext(), 
-                    source: `${letter.toLowerCase}Source` = document.querySelector(`#${letter.toLowerCase}-id`), 
-                    sound: `${letter.toLowerCase}Sound` = `audioContext${letter}`.createMediaElementSource(`${letter.toLowerCase}Source`)
-                };
-                this.audioBank[letter].sound.connect(ctx.destination)
-            });        
+    createGenAudioBankEle(letter) {
+        debugger
+        let ctx = new AudioContext
+                
+        let letterQuerySelectorId = ""
+            letterQuerySelectorId = new String(letterQuerySelectorId + (`#${letter}`) + ('-id'))
+
+        let source = document.querySelector(letterQuerySelectorId)
+            console.log(source.src) //it's registering...
+        console.log ()
+        console.log(ctx.destination)
+                // problem here
+        let sound = ctx.createMediaElementSource(source)
+                console.log('finish initialize sound')
+
+        this.genAudioBank[letter] = {
+            ctx: ctx, 
+            source: source, 
+            sound: sound
+           };
+        this.genAudioBank[letter].sound.connect(this.genAudioBank[letter].ctx.destination)
     }
+
+    createGenAudioBank (array) {
+        array.forEach(letter => {this.createGenBankEle(letter);});        
+    }
+
+    playQ() {
+        this.genAudioBank[Q].sound.play()
+    }
+
+    playW() {
+
+    }
+
+    playE() {
+
+    }
+    
+    playR() {
+
+    }
+    
+    playT() {
+
+    }
+    
+    playY() {
+
+    }
+    
+    playU() {
+
+    }
+    
+    playI() {
+
+    }
+    
+    playO() {
+
+    }
+    
+    playP() {
+
+    }
+    
+    playA() {
+
+    }
+    
+    playS() {
+
+    }
+    
+    playD() {
+
+    }
+    
+    playF() {
+
+    }
+    
+    playG() {
+
+    }
+    
+    playH() {
+
+    }
+    
+    playJ() {
+
+    }
+    
+    playK() {
+
+    }
+    
+    playL() {
+
+    }
+    
+    playZ() {
+
+    }
+    
+    playX() {
+
+    }
+    
+    playC() {
+
+    }
+    
+    playV() {
+
+    }
+    
+    playB() {
+
+    }
+    
+    playN() {
+
+    }
+    
+    playM() {
+
+    }
+    
 
 }
 
