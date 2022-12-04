@@ -1,8 +1,8 @@
 import AudioBank from './audio_bank.js'
 import AniBank from './ani_bank.js'
 let CONSTANTS = {
-    KEY_ALPHABET: Array.from('QWERTYUIOPASDFGHJKLZXCVBNM')
-    // KEY_ALPHABET: Array.from('Q')
+    // KEY_ALPHABET: Array.from('QWERTYUIOPASDFGHJKLZXCVBNM')
+    KEY_ALPHABET: Array.from('Q')
     
 }
 
@@ -10,9 +10,9 @@ export default class KeyDownHandler {
     constructor(){
         this.keys = [];
         this.keyAudioBank = new AudioBank
-        // this.createAudioBank(CONSTANTS.KEY_ALPHABET)
+        this.keyAudioBank.createGenAudioBank(CONSTANTS.KEY_ALPHABET)
         this.addListeners()
-        this.keyAniBank = new AniBank
+        // this.keyAniBank = new AniBank
     }
 
     createAudioBank (array) {
@@ -22,10 +22,14 @@ export default class KeyDownHandler {
     addListeners () {
 
     window.addEventListener('keydown', e => {
+
         console.log(e.code)
+        e.preventDefault()
+        e.stopImmediatePropagation()
+
         switch(e.code) {
         case "KeyQ":
-
+            this.keyAudioBank.playQ()
         break;
         
         case "KeyW":
