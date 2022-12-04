@@ -7,78 +7,32 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./dist/main.css" />
     <script src="./dist/main.js"></script>
-    <!-- <script src="./js/three.js" id="threejs"></script> -->
-
+    
     <title>mosatic</title>
+    <audio controls src="./sounds/Sound_1.wav" id="sound-1" type="audio/wav">
+    </audio>
+
 
 </head>
 
 <body>
 <!-- <h2>mosatic</h2> -->
-    <!-- top row sounds -->
-    <audio src="./sounds/Sound_1.wav" id="Q-id" type="audio/wav"></audio>
-    <!-- <audio src="./sounds/Sound_1.wav" id="W" type="audio/wav"></audio>
-            <audio src="./sounds/Sound_1.wav" id="E" type="audio/wav"></audio>
-            <audio src="./sounds/Sound_1.wav" id="R" type="audio/wav"></audio>
-            <audio src="./sounds/Sound_1.wav" id="T" type="audio/wav"></audio>
-            <audio src="./sounds/Sound_1.wav" id="Y" type="audio/wav"></audio>
-            <audio src="./sounds/Sound_1.wav" id="U" type="audio/wav"></audio>
-            <audio src="./sounds/Sound_1.wav" id="I" type="audio/wav"></audio>
-            <audio src="./sounds/Sound_1.wav" id="O" type="audio/wav"></audio>
-            <audio src="./sounds/Sound_1.wav" id="P" type="audio/wav"></audio>
-        <!-- middle row sounds -->
-    <!-- <audio src="./sounds/Sound_1.wav" id="A" type="audio/wav"></audio>
-            <audio src="./sounds/Sound_1.wav" id="S" type="audio/wav"></audio>
-            <audio src="./sounds/Sound_1.wav" id="D" type="audio/wav"></audio>
-            <audio src="./sounds/Sound_1.wav" id="F" type="audio/wav"></audio>
-            <audio src="./sounds/Sound_1.wav" id="G" type="audio/wav"></audio>
-            <audio src="./sounds/Sound_1.wav" id="H" type="audio/wav"></audio>
-            <audio src="./sounds/Sound_1.wav" id="J" type="audio/wav"></audio>
-            <audio src="./sounds/Sound_1.wav" id="K" type="audio/wav"></audio>
-            <audio src="./sounds/Sound_1.wav" id="L" type="audio/wav"></audio>
-        <!-- bottom row sounds -->
-    <!-- <audio src="./sounds/Sound_1.wav" id="Z" type="audio/wav"></audio>
-            <audio src="./sounds/Sound_1.wav" id="X" type="audio/wav"></audio>
-            <audio src="./sounds/Sound_1.wav" id="C" type="audio/wav"></audio>
-            <audio src="./sounds/Sound_1.wav" id="V" type="audio/wav"></audio>
-            <audio src="./sounds/Sound_1.wav" id="B" type="audio/wav"></audio>
-            <audio src="./sounds/Sound_1.wav" id="N" type="audio/wav"></audio>
-            <audio src="./sounds/Sound_1.wav" id="M" type="audio/wav"></audio> -->
-
 <canvas width="1920" height="1080"></canvas>
 
 
 <!-- <form action="">
 
+<label for="key-input">
+    Key Input
+</label>
+<figure>
+    
+    <input onkeydown="keyDownFunction()" onkeyup="keyUpFunction()" id="key-input">
 
+    <!-- <input type="submit"> -->
 <!-- the rec button should kind of be a submit button? -->
-<script type="module" src="./src/index.js"></script>
-<!-- <script>
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
-    const renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    document.body.appendChild(renderer.domElement);
-
-    const geometry = new THREE.BoxGeometry(1, 1, 1);
-    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-    const cube = new THREE.Mesh(geometry, material);
-    scene.add(cube);
-
-    camera.position.z = 5;
-
-    function animate() {
-        requestAnimationFrame(animate);
-
-        cube.rotation.x += 0.01;
-        cube.rotation.y += 0.01;
-
-        renderer.render(scene, camera);
-    };
-
-    animate();
-</script> -->
+<script src="./src/index.js"></script>
 
 
 </body>
