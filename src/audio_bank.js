@@ -45,6 +45,7 @@ export default class AudioBank {
             });        
     }
 
+// top row
     playQ () {
         this.coreAudioBank['Q'].source.play()
     }
@@ -88,68 +89,72 @@ export default class AudioBank {
         this.coreAudioBank['P'].source.play()
     }
 
-    playA () {
+// middle row
 
+    playA () {
+        this.coreAudioBank['A'].source.play()
     }
 
     playS () {
-
+        this.coreAudioBank['S'].source.play()
     }
 
     playD () {
-
+        this.coreAudioBank['D'].source.play()
     }
 
     playF () {
-
+        this.coreAudioBank['F'].source.play()
     }
 
     playG () {
-
+        this.coreAudioBank['G'].source.play()
     }
 
     playH () {
-
+        this.coreAudioBank['H'].source.play()
     }
 
     playJ () {
-
+        this.coreAudioBank['J'].source.play()
     }
 
     playK () {
-
+        this.coreAudioBank['K'].source.play()
     }
 
     playL () {
-
+        this.coreAudioBank['L'].source.play()
     }
 
-    playZ () {
+    // bottom row
 
+    playZ () {
+        this.coreAudioBank['Z'].source.play()
     }
 
     playX () {
-
+        this.coreAudioBank['X'].source.play()
     }
 
     playC () {
-
+        this.coreAudioBank['C'].source.play()
     }
 
     playV () {
-
+        this.coreAudioBank['V'].source.play()
     }
 
     playB () {
-
+        this.coreAudioBank['B'].source.play()
     }
 
     playN () {
-
+        this.coreAudioBank['N'].source.play()
     }
 
     playM () {
-
+        this.coreAudioBank['M'].source.play()
     }
 
 }

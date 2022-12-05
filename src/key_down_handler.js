@@ -1,3 +1,4 @@
+import AniBank from './ani_bank.js';
 import AudioBank from './audio_bank.js'
 
 let CONSTANTS = {
@@ -9,6 +10,8 @@ export default class KeyDownHandler {
         this.keys = [];
         this.soundBank = new AudioBank
         this.soundBank.createBank(CONSTANTS.KEY_ALPHABET)
+        this.aniBank = new AniBank
+        this.aniBank.createBank(CONSTANTS.KEY_ALPHABET)
         this.addListeners()
     }
 

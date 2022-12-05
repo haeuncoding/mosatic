@@ -10,13 +10,8 @@
   
 // }
 import KeyDownHandler from './key_down_handler.js';
-import AudioBank from './audio_bank.js'
-
 
 window.addEventListener('load', function() {
-    let CONSTANTS = {
-    KEY_ALPHABET: Array.from('QWERTYUIOPASDFGHJKLZXCVBNM')
-    }
 
     const canvas = document.querySelector('canvas');
     const context = canvas.getContext('2d');
@@ -31,6 +26,26 @@ window.addEventListener('load', function() {
 
     // notes 12-04-22 #2 : going to add the keydown handler now and see
     const keysDown = new KeyDownHandler
+
+}); //outer Window Event Listener bounds
+      
+
+
+// const recorded = {} // this will have the various keys and their attr, like time/order(?)
+
+
+// // second, key up handler (?)
+// // not sure if i'd need a key up...
+
+
+// // third, recording handler
+// // includes play, pause, stop, and of course record functions
+
+// // fourth, reverb functions
+
+
+
+// extraneous code for reference
 
 //   window.addEventListener('keydown', e => {
 //         e.preventDefault()
@@ -142,21 +157,4 @@ window.addEventListener('load', function() {
 //         break;
 //     }
 //     })
-}); //outer Window Event Listener bounds
-      
-
-
-// const recorded = {} // this will have the various keys and their attr, like time/order(?)
-
-
-// // second, key up handler (?)
-// // not sure if i'd need a key up...
-
-
-// // third, recording handler
-// // includes play, pause, stop, and of course record functions
-
-// // fourth, reverb functions
-
-
 
