@@ -3,15 +3,16 @@ import AudioBank from './audio_bank.js'
 
 let CONSTANTS = {
     KEY_ALPHABET: Array.from('QWERTYUIOPASDFGHJKLZXCVBNM')
+    // KEY_ALPHABET: Array.from('Q')
+
 }
 
 export default class KeyDownHandler {
     constructor() {
         this.keys = [];
-        this.soundBank = new AudioBank
-        this.soundBank.createBank(CONSTANTS.KEY_ALPHABET)
+        // this.soundBank = new AudioBank
+        // this.soundBank.createBank(CONSTANTS.KEY_ALPHABET)
         this.aniBank = new AniBank
-        this.aniBank.createBank(CONSTANTS.KEY_ALPHABET)
         this.addListeners()
     }
 
@@ -22,7 +23,8 @@ export default class KeyDownHandler {
         console.log(e.code)
         switch(e.code) {
         case "KeyQ":
-            this.soundBank.playQ()
+            // this.soundBank.playQ()
+            this.aniBank.aniQ()
         break;
         
         case "KeyW":
@@ -128,19 +130,3 @@ export default class KeyDownHandler {
     })
     };
 };
-
-
-    // extraneous code that worked previously for reference () {
-    //     const audioContextQ = new AudioContext()
-    //     const qSource = document.querySelector('#Q-id')
-    //     const qSound = audioContextQ.createMediaElementSource(qSource);
-    //     qSound.connect(audioContextQ.destination)
-        //   const audioContextQ = new AudioContext()
-    //   console.log(audioContextQ instanceof AudioContext)
-    //   const qSource = document.querySelector('#Q-id')
-    //   console.log(qSource instanceof HTMLMediaElement)
-    //   const qSound = audioContextQ.createMediaElementSource(qSource);
-    //   console.log(qSound instanceof MediaElementAudioSourceNode)
-    //   qSound.connect(audioContextQ.destination)
-    // }
-

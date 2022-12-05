@@ -1,46 +1,34 @@
-import * as THREE from '../node_modules/three/build/three.module.js';
-
+import QAnimate from './animations/Q_animate.js'
 export default class AniBank {
     constructor () {
         this.coreAniBank = {}
+        this.initializeBank()
+        // console.log(this.coreAniBank)
     }
 
-    createScene (letter) {
-        let nameString = ""
-        nameString.concat(`${letter}`).concat("Scene")
-        nameString = new THREE.Scene();
-        return nameString
+    initializeBank () {
+        const Qinstance = new QAnimate
+            // console.log(Qinstance)
+            this.coreAniBank['Q'] = {Qinstance: Qinstance}
+            // console.log(this.coreAniBank['Q'])
     }
 
-    createCamera (letter) {
-        let nameString = ""
-        nameString.concat(`${letter}`).concat("Camera")
-        nameString = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.6, 1200);
-        return nameString;
-    }
+    // createBank () {
+    //     array.forEach(letter => {
+    //         let action = (`${letter}`).concat('Animate')
+    //         console.log(action)
+    //         let temp = new action
+    //         this.coreAniBank[letter] = {action}
+    //         })     
+    //     console.log(this.coreAniBank)   
+    // }
 
-    createRenderer (letter) {
-        let nameString = ""
-        nameString.concat(`${letter}`).concat("Renderer")
-        nameString = new THREE.WebGLRenderer({antialias: true});
-        return nameString;
+    aniQ () {
+        console.log(this.coreAniBank['Q'].Qinstance)
+        
+        this.coreAniBank['Q'].Qinstance.renderAni()
+        requestAnimationFrame(this.aniQ)
     }
-
-    createBank (array) {
-        array.forEach(letter => {
-            let scene = this.createScene(letter)
-            let camera = this.createCamera(letter)
-            let renderer = this.createRenderer(letter)
-            this.coreAudioBank[letter] = {
-                scene: scene,
-                camera: camera,
-                renderer: renderer
-                };
-                console.log('end each loop')
-            });     
-        console.log(this.coreAniBank)   
-    }
-
 
 }
 
