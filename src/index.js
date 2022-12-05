@@ -22,220 +22,126 @@ window.addEventListener('load', function() {
     const context = canvas.getContext('2d');
     context.fillStyle = '#95c88c'
     context.fillRect(0, 0, 1920, 1080)
-    const keySoundBank = new AudioBank
-    keySoundBank.createBank(CONSTANTS.KEY_ALPHABET)
-    const soundBank = keySoundBank.coreAudioBank
-    console.log(soundBank)
-//   class KeyDownHandler {
-//     constructor(){
-//         // this.keys = [];
-//         // this.addSoundbank()
-//         this.addListeners()
-//     }
+    // const keySoundBank = new AudioBank
+    // keySoundBank.createBank(CONSTANTS.KEY_ALPHABET)
+    // const soundBank = keySoundBank.coreAudioBank
+    // console.log(soundBank)
 
-//     }
-//     addListeners () {
+    // notes 12-04-22 : so it seems like without the keydown handler it's working fine, ideally i'd like to put this in its own class and just have it here...
 
-//       window.addEventListener('keydown', e => {
-//           e.preventDefault()
-//           e.stopImmediatePropagation()  
-//           console.log(e.code)
+    // notes 12-04-22 #2 : going to add the keydown handler now and see
+    const keysDown = new KeyDownHandler
 
-
-//           switch(e.code) {
-//           case "KeyQ":
-//             // qSound.play()
-//           break;
-          
-//           case "KeyW":
-//           break;
-
-//           case "KeyE":
-//           break;
-
-//           case "KeyR":
-//           break;
-
-//           case "KeyT":
-//           break;
-
-//           case "KeyY":
-//           break;
-
-//           case "KeyU":
-//           break;
-
-//           case "KeyI":
-//           break;
-
-//           case "KeyO":
-//           break;
-
-//           case "KeyP":
-//           break;
-
-//           case "KeyA":
-//           break;
-
-//           case "KeyS":
-//           break;
-
-//           case "KeyD":
-//           break;
-
-//           case "KeyF":
-//           break;
-
-//           case "KeyG":
-//           break;
-
-//           case "KeyH":
-//           break;
-
-//           case "KeyJ":
-//           break;
-
-//           case "KeyK":
-//           break;
-
-//           case "KeyL":
-//           break;
-
-//           case "KeyZ":
-//           break;
-
-//           case "KeyX":
-//           break;
-
-//           case "KeyC":
-//           break;
-
-//           case "KeyV":
-//           break;
-
-//           case "KeyB":
-//           break;
-
-//           case "KeyN":
-//           break;
-
-//           case "KeyM":
-//           break;
-//       }
-//     })};
-//   };
-
-//   const keyDownInp = new KeyDownHandler
-  window.addEventListener('keydown', e => {
-        e.preventDefault()
-        e.stopImmediatePropagation()  
-        console.log(e.code)
-        switch(e.code) {
-        case "KeyQ":
-            soundBank.playQ()
-        break;
+//   window.addEventListener('keydown', e => {
+//         e.preventDefault()
+//         e.stopImmediatePropagation()  
+//         console.log(e.code)
+//         switch(e.code) {
+//         case "KeyQ":
+//             soundBank.playQ()
+//         break;
         
-        case "KeyW":
-            soundBank.playW()
-        break;
+//         case "KeyW":
+//             soundBank.playW()
+//         break;
 
-        case "KeyE":
-            soundBank.playE()
-        break;
+//         case "KeyE":
+//             soundBank.playE()
+//         break;
 
-        case "KeyR":
-            soundBank.playR()
-        break;
+//         case "KeyR":
+//             soundBank.playR()
+//         break;
 
-        case "KeyT":
-            soundBank.playT()
-        break;
+//         case "KeyT":
+//             soundBank.playT()
+//         break;
 
-        case "KeyY":
-            soundBank.playY()
-        break;
+//         case "KeyY":
+//             soundBank.playY()
+//         break;
 
-        case "KeyU":
-            soundBank.playU()
-        break;
+//         case "KeyU":
+//             soundBank.playU()
+//         break;
 
-        case "KeyI":
-            soundBank.playI()
-        break;
+//         case "KeyI":
+//             soundBank.playI()
+//         break;
 
-        case "KeyO":
-            soundBank.playO()
-        break;
+//         case "KeyO":
+//             soundBank.playO()
+//         break;
 
-        case "KeyP":
-            soundBank.playP()
-        break;
+//         case "KeyP":
+//             soundBank.playP()
+//         break;
 
-        case "KeyA":
-            soundBank.playA()
-        break;
+//         case "KeyA":
+//             soundBank.playA()
+//         break;
 
-        case "KeyS":
-            soundBank.playS()
-        break;
+//         case "KeyS":
+//             soundBank.playS()
+//         break;
 
-        case "KeyD":
-            soundBank.playD()
-        break;
+//         case "KeyD":
+//             soundBank.playD()
+//         break;
 
-        case "KeyF":
-            soundBank.playF()
-        break;
+//         case "KeyF":
+//             soundBank.playF()
+//         break;
 
-        case "KeyG":
-            soundBank.playG()
-        break;
+//         case "KeyG":
+//             soundBank.playG()
+//         break;
 
-        case "KeyH":
-            soundBank.playH()
-        break;
+//         case "KeyH":
+//             soundBank.playH()
+//         break;
 
-        case "KeyJ":
-            soundBank.playJ()
-        break;
+//         case "KeyJ":
+//             soundBank.playJ()
+//         break;
 
-        case "KeyK":
-            soundBank.playK()
-        break;
+//         case "KeyK":
+//             soundBank.playK()
+//         break;
 
-        case "KeyL":
-            soundBank.playL()
-        break;
+//         case "KeyL":
+//             soundBank.playL()
+//         break;
 
-        case "KeyZ":
-            soundBank.playZ()
-        break;
+//         case "KeyZ":
+//             soundBank.playZ()
+//         break;
 
-        case "KeyX":
-            soundBank.playX()
-        break;
+//         case "KeyX":
+//             soundBank.playX()
+//         break;
 
-        case "KeyC":
-            soundBank.playC()
-        break;
+//         case "KeyC":
+//             soundBank.playC()
+//         break;
 
-        case "KeyV":
-            soundBank.playV()
-        break;
+//         case "KeyV":
+//             soundBank.playV()
+//         break;
 
-        case "KeyB":
-            soundBank.playB()
-        break;
+//         case "KeyB":
+//             soundBank.playB()
+//         break;
 
-        case "KeyN":
-            soundBank.playN()
-        break;
+//         case "KeyN":
+//             soundBank.playN()
+//         break;
 
-        case "KeyM":
-            soundBank.playM()
-        break;
-    }
-    })
+//         case "KeyM":
+//             soundBank.playM()
+//         break;
+//     }
+//     })
 }); //outer Window Event Listener bounds
       
 
