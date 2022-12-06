@@ -22,6 +22,7 @@ window.addEventListener('load', function() {
     // const soundBank = keySoundBank.coreAudioBank
     // console.log(soundBank)
 
+
     // notes 12-04-22 : so it seems like without the keydown handler it's working fine, ideally i'd like to put this in its own class and just have it here...
 
     // notes 12-04-22 #2 : going to add the keydown handler now and see
