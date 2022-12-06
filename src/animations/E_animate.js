@@ -14,7 +14,7 @@ export default class EAnimate {
         }, 2550)
         this.context.fillStyle = ('#95c88c', 0)
         this.context.fillRect(0, 0, window.innerWidth, window.innerHeight);
-        this.context.drawImage(this.mainObj, 860, 0, 300, 300)
+        this.context.drawImage(this.mainObj, 860, 0, (this.mainObj.width), (this.mainObj.height))
         // this.context.translate(200 / 3600, 200 / 3600)
         this.context.rotate(.01)
         // this.context.translate(-200 /3600, -200 / 3600)

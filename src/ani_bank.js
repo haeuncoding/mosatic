@@ -35,9 +35,7 @@ export default class AniBank {
     }
 // top row
     aniQ () {
-        this.context.restore()
         let QAni = new QAnimate
-
     }
 
     aniW () {

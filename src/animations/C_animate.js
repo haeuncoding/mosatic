@@ -10,12 +10,12 @@ export default class CAnimate {
     draw() {
         setTimeout(() => {
             this.stopAnimation(this.reqAnim)
-        }, 4600)
+        }, 2000)
         this.context.fillStyle = ('#95c88c', 0)
         this.context.fillRect(0, 0, window.innerWidth, window.innerHeight);
-        this.context.drawImage(this.mainObj, 1900, 0, 7000, 1000)
-        this.context.translate(-20, 0)
-        // this.context.rotate(.01)
+        this.context.drawImage(this.mainObj, -250, 0, (this.mainObj.width)/1.5, (this.mainObj.height)/1.5)
+        this.context.translate(0, -50)
+        this.context.rotate(.031)
         // this.context.translate(-200 /3600, -200 / 3600)
         // this.context.scale(.1, .1)
         // this.context.translate(20, 0)

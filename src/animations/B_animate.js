@@ -8,14 +8,15 @@ export default class BAnimate {
     }
 
     draw() {
-        setTimeout(() => {
-            this.stopAnimation(this.reqAnim)
-        }, 4600)
+        // setTimeout(() => {
+        //     this.stopAnimation(this.reqAnim)
+        // }, 15000)
+        // this.context.clearRect(0, 0, window.innerWidth, window.innerHeight)
         this.context.fillStyle = ('#95c88c', 0)
         this.context.fillRect(0, 0, window.innerWidth, window.innerHeight);
-        this.context.drawImage(this.mainObj, 590, -30, 700, 700)
+        this.context.drawImage(this.mainObj, 590, -30, (this.mainObj.width)/2, (this.mainObj.height)/2)
         this.context.translate(800, 800)
-        this.context.rotate(.01)
+        this.context.rotate(.001)
         this.context.translate(-800, -800)
         // this.context.scale(.1, .1)
         // this.context.translate(300, 40)
