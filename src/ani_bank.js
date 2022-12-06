@@ -1,4 +1,8 @@
 import QAnimate from './animations/Q_animate.js'
+const canvas = document.querySelector('canvas')
+const context = canvas.getContext('2d')
+context.clearRect(0, 0, canvas.innerWidth, canvas.innerHeight)
+
 export default class AniBank {
     constructor () {
         this.coreAniBank = {}
@@ -7,10 +11,7 @@ export default class AniBank {
     }
 
     initializeBank () {
-        const Qinstance = new QAnimate
-            // console.log(Qinstance)
-            this.coreAniBank['Q'] = {Qinstance: Qinstance}
-            // console.log(this.coreAniBank['Q'])
+
     }
 
     // createBank () {
@@ -24,10 +25,9 @@ export default class AniBank {
     // }
 
     aniQ () {
-        console.log(this.coreAniBank['Q'].Qinstance)
-        
-        this.coreAniBank['Q'].Qinstance.renderAni()
-        requestAnimationFrame(this.aniQ)
+        let QAni = new QAnimate
+        for (let i = 0; i < 25000; i++)
+        { QAni.animate() }
     }
 
 }
