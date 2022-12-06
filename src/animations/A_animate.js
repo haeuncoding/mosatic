@@ -1,28 +1,26 @@
-export default class QAnimate {
+export default class AAnimate {
     constructor () {
         this.mainObj = new Image();
-        this.mainObj.src = './src/animations/images/Q.png'
+        this.mainObj.src = './src/animations/images/A.png'
         this.canvas = document.querySelector('canvas')
+        console.log(this.canvas)
         this.context = this.canvas.getContext('2d')
-        this.stop = 1000 //250
         window.requestAnimationFrame(this.draw.bind(this))
     }
 
     draw() {
-        this.context.restore()
         setTimeout(() => {
             this.stopAnimation(this.reqAnim)
         }, 2550)
-
         // this.context.clearRect(0, 0, window.innerWidth, window.innerHeight)
         this.context.fillStyle = ('#95c88c', 0)
         this.context.fillRect(0, 0, window.innerWidth, window.innerHeight);
-        this.context.drawImage(this.mainObj, 860, 0, 300, 300)
-        // this.context.translate(200 / 3600, 200 / 3600)
-        this.context.rotate(.01)
-        // this.context.translate(-200 /3600, -200 / 3600)
+        this.context.drawImage(this.mainObj, 0, 540, 700, 700)
+        this.context.translate(200 / 3600, 200 / 3600)
+        this.context.rotate(-.01)
+        this.context.translate(-200 /3600, -200 / 3600)
         // this.context.scale(.1, .1)
-        // this.context.translate(20, 0)
+        this.context.translate(20, 0)
         // this.context.save()
         this.reqAnim = window.requestAnimationFrame(this.draw.bind(this))
     }
