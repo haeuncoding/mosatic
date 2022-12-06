@@ -11,8 +11,8 @@ let CONSTANTS = {
 export default class KeyDownHandler {
     constructor() {
         this.keys = [];
-        this.soundBank = new AudioBank
-        this.soundBank.createBank(CONSTANTS.KEY_ALPHABET)
+        // this.soundBank = new AudioBank
+        // this.soundBank.createBank(CONSTANTS.KEY_ALPHABET)
         this.aniBank = new AniBank
         this.addListeners()
     }
@@ -24,7 +24,7 @@ export default class KeyDownHandler {
         console.log(e.code)
         switch(e.code) {
         case "KeyQ":
-            this.soundBank.playQ()
+            // this.soundBank.playQ()
             this.aniBank.aniQ()
         break;
         
