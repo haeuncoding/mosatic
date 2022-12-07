@@ -14,9 +14,9 @@ export default class XAnimate {
         }, 2550)
         this.context.fillStyle = ('#95c88c', 0)
         this.context.fillRect(0, 0, window.innerWidth, window.innerHeight);
-        this.context.drawImage(this.mainObj, 860, 0, (this.mainObj.width), (this.mainObj.height))
-        // this.context.translate(200 / 3600, 200 / 3600)
-        this.context.rotate(.01)
+        this.context.drawImage(this.mainObj, 0, -(this.mainObj.height), (this.mainObj.width), (this.mainObj.height))
+        this.context.translate(0, 20)
+        // this.context.rotate(.01)
         // this.context.translate(-200 /3600, -200 / 3600)
         // this.context.scale(.1, .1)
         // this.context.translate(20, 0)

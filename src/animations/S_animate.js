@@ -11,12 +11,12 @@ export default class SAnimate {
     draw() {
         setTimeout(() => {
             this.stopAnimation(this.reqAnim)
-        }, 2550)
+        }, 11500)
         this.context.fillStyle = ('#95c88c', 0)
         this.context.fillRect(0, 0, window.innerWidth, window.innerHeight);
-        this.context.drawImage(this.mainObj, 860, 0, (this.mainObj.width), (this.mainObj.height))
-        // this.context.translate(200 / 3600, 200 / 3600)
-        this.context.rotate(.01)
+        this.context.drawImage(this.mainObj, 0, 0, (this.mainObj.width), (this.mainObj.height))
+        this.context.translate(2, 0)
+        // this.context.rotate(.01)
         // this.context.translate(-200 /3600, -200 / 3600)
         // this.context.scale(.1, .1)
         // this.context.translate(20, 0)

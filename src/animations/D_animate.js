@@ -28,7 +28,7 @@ export default class DAnimate {
         this.shiftArrays()
         this.context.rotate(10)
         // this.context.translate(-200 /3600, -200 / 3600)
-        // this.context.scale(.1, .1)
+        // this.context.scale(-2, -2)
         // this.context.translate(20, 0)
         // this.context.save()
         this.reqAnim = window.requestAnimationFrame(this.draw.bind(this))

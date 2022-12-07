@@ -17,7 +17,7 @@ export default class WAnimate {
         this.context.fillRect(0, 0, window.innerWidth, window.innerHeight);
         this.context.drawImage(this.mainObj, 860, 0, (this.mainObj.width), (this.mainObj.height))
         // this.context.translate(200 / 3600, 200 / 3600)
-        this.context.rotate(.01)
+        this.context.rotate(10)
         // this.context.translate(-200 /3600, -200 / 3600)
         // this.context.scale(.1, .1)
         // this.context.translate(20, 0)

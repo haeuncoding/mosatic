@@ -24,6 +24,14 @@ export default class AudioBank {
         return context.createMediaElementSource(source);
     }
 
+    handleAudio (audioEle) {
+        if (audioEle.paused) {
+            audioEle.play();
+        } else {
+            audioEle.currentTime = 0;
+        }
+    }
+
     createBank (array) {
         array.forEach(letter => {
                 let ctx = this.createAudioContext()
@@ -47,114 +55,114 @@ export default class AudioBank {
 
 // top row
     playQ () {
-        this.coreAudioBank['Q'].source.play()
+        this.handleAudio(this.coreAudioBank['Q'].source)
     }
 
     playW () {
-        this.coreAudioBank['W'].source.play()
+        this.handleAudio(this.coreAudioBank['W'].source)
     }
 
     playE () {
-        this.coreAudioBank['E'].source.play()
+        this.handleAudio(this.coreAudioBank['E'].source)
     }
 
     playR () {
-        this.coreAudioBank['R'].source.play()
+        this.handleAudio(this.coreAudioBank['R'].source)
 
     }
 
     playT () {
-        this.coreAudioBank['T'].source.play()
+        this.handleAudio(this.coreAudioBank['T'].source)
 
     }
 
     playY () {
-        this.coreAudioBank['Y'].source.play()
+        this.handleAudio(this.coreAudioBank['Y'].source)
 
     }
 
     playU () {
-        this.coreAudioBank['U'].source.play()
+        this.handleAudio(this.coreAudioBank['U'].source)
     }
 
     playI () {
-        this.coreAudioBank['I'].source.play()
+        this.handleAudio(this.coreAudioBank['I'].source)
     }
 
     playO () {
-        this.coreAudioBank['O'].source.play()
+        this.handleAudio(this.coreAudioBank['O'].source)
     }
 
     playP () {
-        this.coreAudioBank['P'].source.play()
+        this.handleAudio(this.coreAudioBank['P'].source)
     }
 
 // middle row
 
     playA () {
-        this.coreAudioBank['A'].source.play()
+        this.handleAudio(this.coreAudioBank['A'].source)
     }
 
     playS () {
-        this.coreAudioBank['S'].source.play()
+        this.handleAudio(this.coreAudioBank['S'].source)
     }
 
     playD () {
-        this.coreAudioBank['D'].source.play()
+        this.handleAudio(this.coreAudioBank['D'].source)
     }
 
     playF () {
-        this.coreAudioBank['F'].source.play()
+        this.handleAudio(this.coreAudioBank['F'].source)
     }
 
     playG () {
-        this.coreAudioBank['G'].source.play()
+        this.handleAudio(this.coreAudioBank['G'].source)
     }
 
     playH () {
-        this.coreAudioBank['H'].source.play()
+        this.handleAudio(this.coreAudioBank['H'].source)
     }
 
     playJ () {
-        this.coreAudioBank['J'].source.play()
+        this.handleAudio(this.coreAudioBank['J'].source)
     }
 
     playK () {
-        this.coreAudioBank['K'].source.play()
+        this.handleAudio(this.coreAudioBank['K'].source)
     }
 
     playL () {
-        this.coreAudioBank['L'].source.play()
+        this.handleAudio(this.coreAudioBank['L'].source)
     }
 
     // bottom row
 
     playZ () {
-        this.coreAudioBank['Z'].source.play()
+        this.handleAudio(this.coreAudioBank['Z'].source)
     }
 
     playX () {
-        this.coreAudioBank['X'].source.play()
+        this.handleAudio(this.coreAudioBank['X'].source)
     }
 
     playC () {
-        this.coreAudioBank['C'].source.play()
+        this.handleAudio(this.coreAudioBank['C'].source)
     }
 
     playV () {
-        this.coreAudioBank['V'].source.play()
+        this.handleAudio(this.coreAudioBank['V'].source)
     }
 
     playB () {
-        this.coreAudioBank['B'].source.play()
+        this.handleAudio(this.coreAudioBank['B'].source)
     }
 
     playN () {
-        this.coreAudioBank['N'].source.play()
+        this.handleAudio(this.coreAudioBank['N'].source)    
     }
 
     playM () {
-        this.coreAudioBank['M'].source.play()
+        this.handleAudio(this.coreAudioBank['M'].source)
     }
 
 }
