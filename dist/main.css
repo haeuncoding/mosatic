@@ -9,10 +9,25 @@
   padding-top: 2%;
 }
 
+.play-screen {
+  display: flexbox;
+  position: relative;
+  margin: auto;
+  padding: 1.5%;
+  text-align: center;
+}
+
+.logo {
+  display: block;
+  text-align: center;
+}
+
+#mosatic-logo {
+  width: 10%;
+}
+
 .audio-controls {
   display: block;
   font-size: 20px;
-  padding-bottom: 2%;
-  text-align: right;
-  align-items: flex-end;
+  text-align: center;
 }
