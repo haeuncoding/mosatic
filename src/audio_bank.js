@@ -1,6 +1,11 @@
+let CONSTANTS = {
+    KEY_ALPHABET: Array.from('QWERTYUIOPASDFGHJKLZXCVBNM')
+}
+
 export default class AudioBank {
     constructor () {
         this.coreAudioBank = {}
+        this.paused = []
     }
 
     createAudioContext () {
@@ -23,6 +28,43 @@ export default class AudioBank {
         } else {
             audioEle.currentTime = 0;
         }
+    }
+
+    playFromPause () {
+        this.paused.forEach(letter => {
+            if (this.coreAudioBank[letter].paused)
+                {this.coreAudioBank[letter].play()}
+            })
+    }
+    
+
+    resetAllTime () {
+        if (anyPaused) {
+            CONSTANTS.KEY_ALPHABET.forEach(letter => {{
+                this.coreAudioBank[letter].pause()
+                this.coreAudioBank[letter].currentTime = 0
+            }})
+        }
+    }
+
+    pauseAll () {
+        CONSTANTS.KEY_ALPHABET.forEach(letter => {
+        this.coreAudioBank[letter].pause()
+        if (this.coreAudioBank[letter].currentTime !== 0) {
+            this.paused.push(letter)
+        }
+        })
+    }
+
+    anyPaused () {
+        let flag = false;
+        CONSTANTS.KEY_ALPHABET.forEach(letter => {
+            if (this.coreAudioBank[letter].currentTime !== 0 && this.coreAudioBank[letter].paused()) {
+                flag = true;
+                return flag;
+            }
+        })
+        return flag;
     }
 
     createBank (array) {
