@@ -46,17 +46,25 @@
 <!-- <h2>mosatic</h2> -->
 <div class="main">
     <div class="logo">
-        <img src="./src/animations/images/Mosatic Logo.png" alt="Mosatic Logo" id="mosatic-logo">
+        <img src="./src/styles/Mosatic Logo.png" alt="Mosatic Logo" id="mosatic-logo">
     </div>
     <div class="play-screen">
         <canvas width="1000" height="562.5" id="background"></canvas>
     </div>
     <div class="audio-controls">
-        <button id="play"> P L A Y </button>
-        <button id="pause"> P A U S E </button>
-        <button id="stop"> S T O P </button>
-        <button id="record"> R E C </button>
-        <input type="range" min="1" max="100" name="audio-reverb" id="reverb">
+        <!-- <div alt="Mute/Sound Button" class="mute-sound" alt="Mute/Sound Button"> -->
+            <!-- <img src="./src/styles/assets/Sound Button.png" alt="Sound Button" id="sound-button"> -->
+            <!-- <img src="./src/styles/assets/Mute Button.png" alt="Mute Button" id="mute-button"> -->
+        <!-- </div> -->
+        <div class="playback-controls">
+            <img src="./src/styles/assets/Play Button.png" alt="Play Button" id="play-button">
+            <img src="./src/styles/assets/Pause Button.png" alt="Pause Button" id="pause-button">
+            <img src="./src/styles/assets/Stop Button.png" alt="Stop Button" id="stop-button">
+            <img src="./src/styles/assets/Record Button.png" alt="Record Button" id="record-button">
+            <label for="audio-reverb">R E V E R B</label>
+            <input type="range" min="1" max="100" name="audio-reverb" id="reverb">
+        </div>
+        
     </div>
 </div>
 

@@ -2,12 +2,6 @@ export default class AudioBank {
     constructor () {
         this.coreAudioBank = {}
     }
-    
-    // okay, thought process, i do a create bank method that
-    // creates all of the audio files in a bank
-    // then i access each one using a method i.e. AudioBank.playQ and etc.
-    // i'll make an object containing: object[key] = {context: context, 
-    // source: source, sound: sound}
 
     createAudioContext () {
         return new AudioContext
@@ -16,7 +10,6 @@ export default class AudioBank {
     createAudioSource (letter) {
         let querySelectorId = ""
         querySelectorId += `#${letter}-id`
-        console.log(querySelectorId)
         return document.querySelector(querySelectorId)
     }
 
@@ -35,21 +28,20 @@ export default class AudioBank {
     createBank (array) {
         array.forEach(letter => {
                 let ctx = this.createAudioContext()
-                console.log(ctx)
-                console.log('audio context created')
+                // console.log(ctx)
+                // console.log('audio context created')
                 let source = this.createAudioSource(letter)   
-                console.log(source)     
-                console.log('audio source created')
+                // console.log(source)     
+                // console.log('audio source created')
                 let sound = this.createAudioSound(ctx, source)
-                console.log(sound)
-                console.log('audio sound created')
+                // console.log(sound)
+                // console.log('audio sound created')
                 this.coreAudioBank[letter] = {
                     ctx: ctx,
                     source: source, 
                     sound: sound
                 };
                 this.coreAudioBank[letter].sound.connect(this.coreAudioBank[letter].ctx.destination)
-                console.log('end each loop')
             });        
     }
 
