@@ -14,13 +14,8 @@ export default class YAnimate {
         }, 1200)
         this.context.fillStyle = ('#95c88c', 0)
         this.context.fillRect(0, 0, window.innerWidth, window.innerHeight);
-        this.context.drawImage(this.mainObj, 650, 50, (this.mainObj.width), (this.mainObj.height))
-        // this.context.translate(200 / 3600, 200 / 3600)
-        // this.context.rotate(.03)
+        this.context.drawImage(this.mainObj, 300, 50, (this.mainObj.width)/4, (this.mainObj.height)/4)
         this.context.translate(-2, 0)
-        // this.context.scale(.1, .1)
-        // this.context.translate(20, 0)
-        // this.context.save()
         this.reqAnim = window.requestAnimationFrame(this.draw.bind(this))
     }
 

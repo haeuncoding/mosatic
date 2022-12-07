@@ -6,17 +6,38 @@ let CONSTANTS = {
 }
 export default class KeyDownHandler {
     constructor() {
-        this.keys = [];
+        // audio
         this.soundBank = new AudioBank
         this.soundBank.createBank(CONSTANTS.KEY_ALPHABET)
+        // visual
         this.canvas = document.querySelector('canvas');
         this.context = this.canvas.getContext('2d');
-        // this.context.fillStyle = '#95c88c'
-        // this.context.fillRect(0, 0, 1920, 1080)  
         this.background_colors = ["#95c88c", "#967bb6", "#A7C7E7", "#FF6961"]
-
-        this.aniBank = new AniBank
+        this.aniBank = new AniBank;
+        // recording/user interaction
+        this.keys = [];
+        this.recording = false;
         this.addListeners()
+    }
+
+    recordKeys(code) {
+        if (this.recording) {
+            this.keys.push(code)
+            this.getTimestampsMS()
+        }
+    }
+
+    getTimestampsMS = function() {
+    if (!this.durations.length) {
+        this.durations.push(Date.now())
+    } else {
+        let timeNow = (Date.now() - this.durations.at(-1))
+        this.durations.push(timeNow)
+    }};
+
+    playBack() {while (durations.length) {
+    return durations.shift();
+    }
     }
 
     setCanvas() {
@@ -35,7 +56,7 @@ export default class KeyDownHandler {
      window.addEventListener('keydown', e => {
         e.preventDefault()
         e.stopImmediatePropagation()  
-
+        this.recordKeys(e.code)
         console.log(e.code)
         switch(e.code) {
         

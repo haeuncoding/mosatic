@@ -14,12 +14,8 @@ export default class ZAnimate {
         }, 2550)
         this.context.fillStyle = ('#95c88c', 0)
         this.context.fillRect(0, 0, window.innerWidth, window.innerHeight);
-        this.context.drawImage(this.mainObj, 0, 0, (this.mainObj.width), (this.mainObj.height))
-        this.context.translate(2, 8)
-        // this.context.rotate(.01)
-        // this.context.translate(-200 /3600, -200 / 3600)
-        // this.context.translate(20, 0)
-        // this.context.save()
+        this.context.drawImage(this.mainObj, 0, 0, (this.mainObj.width) / 8, (this.mainObj.height) / 8)
+        this.context.translate(4, 4)
         this.reqAnim = window.requestAnimationFrame(this.draw.bind(this))
     }
 

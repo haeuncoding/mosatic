@@ -4,7 +4,6 @@ export default class IAnimate {
         this.mainObj.src = './src/animations/images/I.png'
         this.canvas = document.querySelector('canvas')
         this.context = this.canvas.getContext('2d')
-        this.stop = 10 //250
         window.requestAnimationFrame(this.draw.bind(this))
     }
 
@@ -14,13 +13,9 @@ export default class IAnimate {
         }, 10070)
         this.context.fillStyle = ('#95c88c', 0)
         this.context.fillRect(0, 0, window.innerWidth, window.innerHeight);
-        this.context.drawImage(this.mainObj, 860, 1080, (this.mainObj.width)/10, (this.mainObj.height)/10)
-        // this.context.translate(200 / 3600, 200 / 3600)
-        this.context.rotate(-.9)
-        // this.context.translate(-200 /3600, -200 / 3600)
-        // this.context.scale(.1, .1)
-        this.context.translate(20, 0)
-        // this.context.save()
+        this.context.drawImage(this.mainObj, 200, 562, (this.mainObj.width)/20, (this.mainObj.height)/20)
+        this.context.rotate(-1.4)
+        this.context.translate(40, 0)
         this.reqAnim = window.requestAnimationFrame(this.draw.bind(this))
     }
 

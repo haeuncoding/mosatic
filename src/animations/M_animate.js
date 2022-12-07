@@ -4,7 +4,6 @@ export default class MAnimate {
         this.mainObj.src = './src/animations/images/M.png'
         this.canvas = document.querySelector('canvas')
         this.context = this.canvas.getContext('2d')
-        this.stop = 10 //250
         window.requestAnimationFrame(this.draw.bind(this))
     }
 
@@ -14,13 +13,8 @@ export default class MAnimate {
         }, 2850)
         this.context.fillStyle = ('#95c88c', 0)
         this.context.fillRect(0, 0, window.innerWidth, window.innerHeight);
-        this.context.drawImage(this.mainObj, 0, 1080, (this.mainObj.width)/20, (this.mainObj.height)/20)
-        // this.context.translate(200 / 3600, 200 / 3600)
+        this.context.drawImage(this.mainObj, 0, 562.5, (this.mainObj.width)/20, (this.mainObj.height)/20)
         this.context.rotate(-.01)
-        // this.context.translate(-200 /3600, -200 / 3600)
-        // this.context.scale(.1, .1)
-        // this.context.translate(20, 0)
-        // this.context.save()
         this.reqAnim = window.requestAnimationFrame(this.draw.bind(this))
     }
 

@@ -13,13 +13,10 @@ export default class GAnimate {
         }, 900)
         this.context.fillStyle = ('#95c88c', 0)
         this.context.fillRect(0, 0, window.innerWidth, window.innerHeight);
-        this.context.drawImage(this.mainObj, 860, 250, (this.mainObj.width)/3, (this.mainObj.height)/3)
+        this.context.drawImage(this.mainObj, 200, 250, (this.mainObj.width)/3, (this.mainObj.height)/3)
         this.context.translate(40 / 360, 40 / 360)
         this.context.rotate(-.004)
         this.context.translate(-40 /360, -40 / 360)
-        // this.context.scale(.1, .1)
-        // this.context.translate(20, 0)
-        // this.context.save()
         this.reqAnim = window.requestAnimationFrame(this.draw.bind(this))
     }
 

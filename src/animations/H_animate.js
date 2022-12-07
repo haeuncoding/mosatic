@@ -4,7 +4,6 @@ export default class HAnimate {
         this.mainObj.src = './src/animations/images/H.png'
         this.canvas = document.querySelector('canvas')
         this.context = this.canvas.getContext('2d')
-        this.stop = 10 //250
         window.requestAnimationFrame(this.draw.bind(this))
     }
 
@@ -14,13 +13,9 @@ export default class HAnimate {
         }, 3000)
         this.context.fillStyle = ('#95c88c', 0)
         this.context.fillRect(0, 0, window.innerWidth, window.innerHeight);
-        this.context.drawImage(this.mainObj, 1200, 940, (this.mainObj.width)/4, (this.mainObj.height)/4)
+        this.context.drawImage(this.mainObj, 400, 250, (this.mainObj.width)/4, (this.mainObj.height)/4)
         this.context.translate(4, -4)
-        // this.context.rotate(.01)
         this.context.translate(-4, -4)
-        // this.context.scale(.1, .1)
-        // this.context.translate(20, 0)
-        // this.context.save()
         this.reqAnim = window.requestAnimationFrame(this.draw.bind(this))
     }
 

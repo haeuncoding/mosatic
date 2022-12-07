@@ -16,7 +16,7 @@ window.addEventListener('load', function() {
     const canvas = document.querySelector('canvas');
     const context = canvas.getContext('2d');
     context.fillStyle = '#967bb6'
-    context.fillRect(0, 0, 1920, 1080)
+    context.fillRect(0, 0, 1000, 562.5)
     // const keySoundBank = new AudioBank
     // keySoundBank.createBank(CONSTANTS.KEY_ALPHABET)
     // const soundBank = keySoundBank.coreAudioBank

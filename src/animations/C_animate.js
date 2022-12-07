@@ -13,7 +13,7 @@ export default class CAnimate {
         }, 2000)
         this.context.fillStyle = ('#95c88c', 0)
         this.context.fillRect(0, 0, window.innerWidth, window.innerHeight);
-        this.context.drawImage(this.mainObj, -250, 0, (this.mainObj.width)/1.5, (this.mainObj.height)/1.5)
+        this.context.drawImage(this.mainObj, 500, 1000, (this.mainObj.width)/5.5, (this.mainObj.height)/5.5)
         this.context.translate(0, -50)
         this.context.rotate(.031)
         // this.context.translate(-200 /3600, -200 / 3600)
