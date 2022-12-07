@@ -39,6 +39,7 @@
         <audio src="./sounds/25_N_Sound.wav" id="N-id" type="audio/wav"></audio>
         <audio src="./sounds/26_M_Sound.wav" id="M-id" type="audio/wav"></audio>
 
+        <audio src="./sounds/Church_IR.ogg" id="church-ir-id" type="audio/ogg"></audio>
 
 </head>
 
@@ -46,23 +47,32 @@
 <!-- <h2>mosatic</h2> -->
 <div class="main">
     <div class="logo">
-        <img src="./src/styles/Mosatic Logo.png" alt="Mosatic Logo" id="mosatic-logo">
+        <img src="./src/styles/Mosatic Logo.png" alt="Mosatic Logo">
     </div>
     <div class="play-screen">
+        <img src="./src/styles/Intro_Stage1.png" alt="Intro 1" id="intro1">
+        <img src="./src/styles/Intro_Stage2a.png" alt="Intro 2a" id="intro2a">
+        <img src="./src/styles/Intro_Stage2b.png" alt="Intro 2b" id="intro2b">
+        <img src="./src/styles/Intro_Stage2c.png" alt="Intro 2c" id="intro2c">
+        <img src="./src/styles/Intro_Stage3.png" alt="Intro 3" id="intro3">
+        <img src="./src/styles/Intro_Stage4.png" alt="Intro 4" id="intro4">
+
         <canvas width="1000" height="562.5" id="background"></canvas>
     </div>
     <div class="audio-controls">
-        <!-- <div alt="Mute/Sound Button" class="mute-sound" alt="Mute/Sound Button"> -->
-            <!-- <img src="./src/styles/assets/Sound Button.png" alt="Sound Button" id="sound-button"> -->
-            <!-- <img src="./src/styles/assets/Mute Button.png" alt="Mute Button" id="mute-button"> -->
-        <!-- </div> -->
+        <div alt="Mute/Sound Button" class="mute-sound" alt="Mute/Sound Button">
+            <img src="./src/styles/assets/Sound Button.png" alt="Sound Button" id="sound-button">
+            <img src="./src/styles/assets/Mute Button.png" alt="Mute Button" id="mute-button">
+        </div>
         <div class="playback-controls">
             <img src="./src/styles/assets/Play Button.png" alt="Play Button" id="play-button">
             <img src="./src/styles/assets/Pause Button.png" alt="Pause Button" id="pause-button">
             <img src="./src/styles/assets/Stop Button.png" alt="Stop Button" id="stop-button">
             <img src="./src/styles/assets/Record Button.png" alt="Record Button" id="record-button">
-            <label for="audio-reverb">R E V E R B</label>
-            <input type="range" min="1" max="100" name="audio-reverb" id="reverb">
+            <!-- <label for="reverb-container">| | | | | R E V E R B</label>
+            <div class="reverb-container">
+                <input type="range" min="1" max="100" name="reverb" class="slider "id="reverb-slider">
+            </div> -->
         </div>
         
     </div>
@@ -72,7 +82,7 @@
 <!-- <form action="">
 
 
-<!-- the rec button should kind of be a submit button? -->
+ the rec button should kind of be a submit button? -->
 
 <script src="./src/index.js" type="module"></script>
 

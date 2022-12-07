@@ -12,11 +12,12 @@ export default class ClickHandler {
         this.soundBank = keysDown.soundBank
         this.recButton = document.querySelector("#record-button")
         this.playButton = document.querySelector("#play-button")
-        this.pauseButton = document.querySelector("pause-button")
-        this.stopButton = document.querySelector("stop-button")
+        this.pauseButton = document.querySelector("#pause-button")
+        this.stopButton = document.querySelector("#stop-button")
         console.log(this.soundState)
         this.addRecordListener()
         this.addPlayListener()
+        this.flag = false
     }
 
     addRecordListener() {
@@ -60,13 +61,13 @@ export default class ClickHandler {
     )}
 
     hitStopButton () {
-        if (this.soundBank.anyPaused()) {
-            this.soundBank.resetAllTime()
-        } else {
-            this.soundBank.resetAllTime()
-            this.keysDown.keys = [];
-            this.keysDown.durations = [];
-        }
+        // if (this.soundBank.anyPaused()) {
+        //     this.soundBank.resetAllTime()
+        // } else {
+        //     this.soundBank.resetAllTime()
+        //     this.keysDown.keys = [];
+        //     this.keysDown.durations = [];
+        // }
     }
 
     addPauseListener() {
@@ -78,11 +79,13 @@ export default class ClickHandler {
     )}
 
     hitPauseButton () {
-        if (this.soundBank.anyPaused) {
-            this.soundBank.playFromPause()
-        } else {
-        this.soundBank.pauseAll()
-        }
+        // this.flag = true
+        // console.log(this.flag)
+        // if (this.soundBank.anyPaused) {
+        //     this.soundBank.playFromPause()
+        // } else {
+        // this.soundBank.pauseAll()
+        // }
     }
 
     

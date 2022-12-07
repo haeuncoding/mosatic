@@ -10,5 +10,4 @@ window.addEventListener('load', function() {
 
     const keysDown = new KeyDownHandler
     const clickDown = new ClickHandler(keysDown)
-
 });
