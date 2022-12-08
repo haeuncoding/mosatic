@@ -4,7 +4,7 @@ Mosatic is a Javascript app that allows users to create pleasant and fun music w
 
 # Live Link
 
-haeuncreative.github.io/mosatic
+[Mosatic Live Link](haeuncreative.github.io/mosatic)
 
 # Background
 
