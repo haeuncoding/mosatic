@@ -74,9 +74,9 @@ export default class KeyDownHandler {
             e.stopImmediatePropagation()  
             this.introSwitch()
             if (this.currentSlide === this.intro4) {
+                this.addKeyListeners()
                 this.currentSlide.style.display = "none"
                 window.removeEventListener("keypress", introSwitch)
-                this.addKeyListeners()
             }
         })
     }
