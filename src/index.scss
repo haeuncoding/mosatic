@@ -9,8 +9,6 @@ body {
 }
 
 .main {
-    // padding-top: 1vw;
-    // padding-bottom: 1vw;
     text-align: center;
     scale: 85%;
     align-content: space-around;
@@ -20,9 +18,7 @@ body {
 .play-screen {
     display: flex;
     justify-content: center;
-    // min-width: fit-content;
     max-width:100vw;
-    // min-height: fit-content;
     padding: 1.5%;
     text-align: center;
     margin: 5px 0;
@@ -30,9 +26,7 @@ body {
 
 .header {
     display: flex;
-    // text-align: center;
     justify-content: center;
-    // margin: auto;
     align-content: space-between;
 }
 
@@ -51,7 +45,6 @@ body {
 
 .logo img:hover {
     transition: .3s;
-    // filter: brightness(80%);
     animation: wiggle 2.5s;
     animation-fill-mode: forwards;
 }
@@ -125,54 +118,46 @@ body {
     background-color: #8781bd;
 }
 #background {
-    // visibility: hidden;
     display: none;
     animation: fadeIn 1s;
 }
 
 #intro-blank {
-    // visibility: visible;
     display: none;
     animation: fadeIn 1s;
     background-color: #8781bd;
 }
 
 #intro1 {
-    // visibility: visible;
     display: flex;
     animation: fadeIn 1s;
     background-color: #8781bd;
 }
 
 #intro2a {
-    // visibility: hidden;
     display: none;
     animation: fadeIn 1s;
     background-color: #8781bd;
 }
 
 #intro2b {
-    // visibility: hidden;
     display: none;
     animation: fadeIn 1s;
-        background-color: #8781bd;
+    background-color: #8781bd;
 }
 
 #intro2c {
-    // visibility: hidden;
     display: none;
     animation: fadeIn 1s;
     background-color: #8781bd;
 }
 
 #intro3 {
-    // visibility: hidden;
     display: none;
     animation: fadeIn 1s;
     background-color: #8781bd;
 }
 #intro4 {
-    // visibility: hidden;
     display: none;
     animation: fadeIn 1s;
     background-color: #8781bd;

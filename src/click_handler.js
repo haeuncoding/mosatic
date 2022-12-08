@@ -7,7 +7,6 @@
 export default class ClickHandler {
     
     constructor (keysDown) {
-        // this.soundState = document.querySelector('.mute-sound')
         this.keysDown = keysDown
         this.soundBank = keysDown.soundBank
         this.allSounds = document.querySelectorAll("audio")

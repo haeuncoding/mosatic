@@ -35,7 +35,6 @@ export default class KeyDownHandler {
         this.keys = [];
         this.durations = [];
         this.recording = false;
-        // this.addListeners()
     }
 
 
@@ -43,7 +42,6 @@ export default class KeyDownHandler {
     introSwitch() {
         if (this.currentSlide) {
             this.currentSlide.style.animation = "fadeOut 1s"
-            // this.blank.style.display = "flex"
             this.currentSlide.style.display = "none"
             this.currentSlide = ""
         }
@@ -80,8 +78,8 @@ export default class KeyDownHandler {
                 window.removeEventListener("keypress", introSwitch)
                 this.addKeyListeners()
             }
-            })
-        }
+        })
+    }
 
 
     recordKeys(e) {
@@ -114,17 +112,11 @@ export default class KeyDownHandler {
         for (let i = 0; i < refNum; i++) {
             let time = this.durations[i];
             let key = this.keys[i]
-            console.log(time)
-            console.log(key.code)
             setTimeout(() => {
                 this.playSwitch(key)
             }, time)
         }
         document.querySelector("#play-button").style.filter = "brightness(100%)"
-    }
-
-    instSwitch(e) {
-
     }
 
     playSwitch(e) {
@@ -305,25 +297,21 @@ export default class KeyDownHandler {
         this.context.fillStyle = this.background_colors[0]
         switch(this.context.fillStyle) {
             case "#95c88c":
-                console.log('case1')
                 this.body.style.backgroundColor = "#d1f0c8"
                 this.context.fillRect(0, 0, 1920, 1080) 
                 this.context.save()
                 break;
             case "#967bb6":
-                console.log('case2')
                 this.body.style.backgroundColor = "#f0c8d1"
                 this.context.fillRect(0, 0, 1920, 1080) 
                 this.context.save()
                 break; 
             case "#A7C7E7":
-                console.log('case3')
                 this.body.style.backgroundColor = "#f0e7c8"
                 this.context.fillRect(0, 0, 1920, 1080) 
                 this.context.save()
                 break; 
             case "#FF6961":
-                console.log('case4')
                 this.body.style.backgroundColor = "#d3c8f0"
                 this.context.fillRect(0, 0, 1920, 1080) 
                 this.context.save()
@@ -339,7 +327,6 @@ export default class KeyDownHandler {
      window.addEventListener('keydown', e => {
         e.preventDefault()
         e.stopImmediatePropagation()  
-        console.log(e.code)
         switch(e.code) {        
         case "Space":
             this.resetCanvas()
