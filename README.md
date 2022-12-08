@@ -21,11 +21,11 @@ All 26 alphabetical keys are mapped to an animation and audiobyte. Press one to 
 ![mosatic interface](https://github.com/haeuncreative/mosatic/blob/state-three/read_me_imgs/Mosatic%20Diagram.png)
 
 # Folder Structure
-├── dist                  # Compiled files (alternatively `dist`)
-├── node_modules                    # Documentation files (alternatively `doc`)
-├── read_me_imgs                     # Source files (alternatively `lib` or `app`)
-├── sounds                    # Automated tests (alternatively `spec` or `tests`)
-├── src                   # Tools and utilities
+├── dist                  
+├── node_modules                   
+├── read_me_imgs   
+├── sounds   
+├── src      
 └── README.md
 
 # Technical Implementation
