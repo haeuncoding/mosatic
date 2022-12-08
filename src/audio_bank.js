@@ -2,14 +2,11 @@ let CONSTANTS = {
     KEY_ALPHABET: Array.from('QWERTYUIOPASDFGHJKLZXCVBNM')
 }
 
-import Reverb from './reverb'
 export default class AudioBank {
     constructor () {
         this.coreAudioBank = {}
-        this.irAudioData = document.querySelector("#church-ir-id")
-        this.paused = []
-        this.initializeReverb()
-        this.reverb = new Reverb
+        // this.initializeReverb()
+        // this.reverb = new Reverb
         this.pauseWorkingQuestionMark = false
     }
 
@@ -34,48 +31,6 @@ export default class AudioBank {
         } else {
             audioEle.currentTime = 0;
         }
-    }
-
-    playFromPause () {
-        this.pauseWorkingQuestionMark = true
-        this.paused.forEach(letter => {
-            if (this.coreAudioBank[letter].paused)
-                {this.coreAudioBank[letter].play()}
-            })
-        console.log(this.pauseWorkingQuestionMark)
-    }
-    
-
-    resetAllTime () {
-        console.log('the inner machinations of my mind are an enigma')
-        if (anyPaused) {
-            CONSTANTS.KEY_ALPHABET.forEach(letter => {{
-                this.coreAudioBank[letter].pause()
-                this.coreAudioBank[letter].currentTime = 0
-            }})
-        }
-    }
-
-    pauseAll () {
-        CONSTANTS.KEY_ALPHABET.forEach(letter => {
-        this.coreAudioBank[letter].pause()
-        if (this.coreAudioBank[letter].currentTime !== 0) {
-            this.paused.push(letter)
-        }
-        })
-        this.pauseWorkingQuestionMark = true
-        console.log(this.pauseWorkingQuestionMark)
-    }
-
-    anyPaused () {
-        let flag = false;
-        CONSTANTS.KEY_ALPHABET.forEach(letter => {
-            if (this.coreAudioBank[letter].currentTime !== 0 && this.coreAudioBank[letter].paused()) {
-                flag = true;
-                return flag;
-            }
-        })
-        return flag;
     }
 
     createBank (array) {

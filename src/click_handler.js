@@ -10,14 +10,80 @@ export default class ClickHandler {
         // this.soundState = document.querySelector('.mute-sound')
         this.keysDown = keysDown
         this.soundBank = keysDown.soundBank
+        this.allSounds = document.querySelectorAll("audio")
+        this.soundArr = Array.from(this.allSounds)
+        // buttons
         this.recButton = document.querySelector("#record-button")
         this.playButton = document.querySelector("#play-button")
         this.pauseButton = document.querySelector("#pause-button")
         this.stopButton = document.querySelector("#stop-button")
-        console.log(this.soundState)
+        this.muteButton = document.querySelector("#mute-button")
+        this.soundButton = document.querySelector("#sound-button")
+        this.muteFunction = document.querySelector(".mute-sound")
+
+        // listeners
         this.addRecordListener()
         this.addPlayListener()
+        this.addPauseListener()
+        this.addStopListener()
+        this.addMuteListener()
+        this.addSoundListener()
         this.flag = false
+    }
+
+    addMuteListener() {
+        this.muteButton.addEventListener('click', e => {
+            e.preventDefault()
+            e.stopImmediatePropagation()
+            this.hitMuteButton()
+        })
+    }
+
+    addSoundListener() {
+        this.soundButton.addEventListener('click', e => {
+            e.preventDefault()
+            e.stopImmediatePropagation()
+            this.hitMuteButton()
+        })
+    }
+
+    muteAll () {
+        this.allSounds.forEach(sound => {
+            this.muteEle(sound);
+        })
+    }
+
+    muteEle (ele) {
+        ele.muted = true;
+    }
+
+    unmuteAll () {
+        this.allSounds.forEach(sound => {
+            this.unmuteEle(sound)
+        })
+    }
+
+    unmuteEle (ele) {
+        ele.muted = false;
+    }
+
+    hitMuteButton() {
+        console.log('bro')
+        if (this.muteButton.style.display === "inherit") {
+            // audio.muted = true;
+            this.muteAll()
+            this.soundButton.style.display = "inherit"
+            this.muteButton.style.display ="none"
+            console.log('whaddup')
+            console.log(this.muteFunction.class)
+        } else {
+            // audio.muted = false
+            this.unmuteAll()
+            this.soundButton.style.display = "none"
+            this.muteButton.style.display ="inherit"
+            console.log("i'm dying, it feels like a dream")
+            console.log(this.muteFunction.class)
+        }
     }
 
     addRecordListener() {
@@ -33,8 +99,11 @@ export default class ClickHandler {
     hitRecordButton () {
         if (!this.keysDown.recording) {
             this.keysDown.recording = true;
+            this.recButton.style.filter = "brightness(60%)"
         } else {
             this.keysDown.recording = false;
+            this.recButton.style.filter = "brightness(100%)"
+
         }
     }
     
@@ -47,27 +116,53 @@ export default class ClickHandler {
     )}
 
     hitPlayButton () {
-        this.keysDown.playBack()
+        this.keysDown.playBackCheck()
     }
 
     addStopListener() {
      this.stopButton.addEventListener('click', e => {
         e.preventDefault()
         e.stopImmediatePropagation()
-        this.hitStopButton()
         console.log(this.keysDown.keys)
         console.log(this.keysDown.durations)
+        this.hitStopButton()
     }
     )}
 
     hitStopButton () {
-        // if (this.soundBank.anyPaused()) {
-        //     this.soundBank.resetAllTime()
+        let paused = this.soundArr.filter(sound => sound.paused)
+        console.log(paused)
+        // if (paused.length) {
+        //     this.pauseAll()
+        //     this.resetAll();
         // } else {
-        //     this.soundBank.resetAllTime()
-        //     this.keysDown.keys = [];
-        //     this.keysDown.durations = [];
-        // }
+            this.pauseAll()
+            this.resetAll()
+            this.keysDown.keys = [];
+            this.keysDown.durations = [];
+        
+        console.log(this.keysDown.keys)
+        console.log(this.keysDown.durations)
+    }
+
+    resetAll () {
+        this.allSounds.forEach(sound => {
+            sound.currentTime = 0;
+        })
+    }
+
+    pauseAll () {
+        this.allSounds.forEach(sound => {
+            sound.pause();
+        })
+    }
+
+    playCheck () {
+        let flag = false
+        this.soundArr.forEach(sound => {
+            if (!sound.pause()) flag = true;
+        })
+        return flag;
     }
 
     addPauseListener() {
@@ -78,14 +173,18 @@ export default class ClickHandler {
     }
     )}
 
+    resumeAll () {
+        this.soundArr.forEach(sound => {
+            if (sound.currentTime > 0) sound.play();
+        })
+    }
+
     hitPauseButton () {
-        // this.flag = true
-        // console.log(this.flag)
-        // if (this.soundBank.anyPaused) {
-        //     this.soundBank.playFromPause()
-        // } else {
-        // this.soundBank.pauseAll()
-        // }
+        if (this.playCheck()) {
+            this.pauseAll;
+        } else {
+            this.resumeAll;
+        }
     }
 
     

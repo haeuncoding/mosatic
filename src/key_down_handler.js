@@ -9,7 +9,24 @@ export default class KeyDownHandler {
         // audio
         this.soundBank = new AudioBank
         this.soundBank.createBank(CONSTANTS.KEY_ALPHABET)
-        // visual
+        // visual // intro
+        this.intro1 = document.querySelector('#intro1')
+        this.intro2a = document.querySelector('#intro2a')
+        this.intro2b = document.querySelector('#intro2b')
+        this.intro2c = document.querySelector('#intro2c')
+        this.intro3 = document.querySelector('#intro3')
+        this.intro4 = document.querySelector('#intro4')
+        this.introBank = [
+            this.intro1,
+            this.intro2a,
+            this.intro2b,
+            this.intro2c,
+            this.intro3,
+            this.intro4
+        ]
+        this.addPressListener()
+        // visual // main
+        this.body = document.querySelector('body')
         this.canvas = document.querySelector('canvas');
         this.context = this.canvas.getContext('2d');
         this.background_colors = ["#95c88c", "#967bb6", "#A7C7E7", "#FF6961"]
@@ -18,8 +35,54 @@ export default class KeyDownHandler {
         this.keys = [];
         this.durations = [];
         this.recording = false;
-        this.addListeners()
+        // this.addListeners()
     }
+
+
+    
+    introSwitch() {
+        if (this.currentSlide) {
+            this.currentSlide.style.animation = "fadeOut 1s"
+            // this.blank.style.display = "flex"
+            this.currentSlide.style.display = "none"
+            this.currentSlide = ""
+        }
+        if (!this.introBank.length) {
+            slide.style.display = "none"
+            this.introFinish = true
+        }
+        console.log(this.introBank)
+        if (this.introBank.length) {
+            let slide = (this.introBank.shift())
+            slide.style.filter = "brightness(60%)"
+            console.log(slide)
+            if (slide === this.intro4 || !slide) {
+                this.canvas.style.display = "flex";
+                this.addKeyListeners()
+            }
+            if (slide.style.display = "none") {
+                slide.style.display = "flex"
+                slide.style.filter = "brightness(60%)"
+            }
+            this.currentSlide = slide;
+            slide.style.filter = "brightness(100%)"
+        }
+    }
+
+
+    addPressListener() {
+        window.addEventListener('keypress', e => {
+            e.preventDefault()
+            e.stopImmediatePropagation()  
+            this.introSwitch()
+            if (this.currentSlide === this.intro4) {
+                this.currentSlide.style.display = "none"
+                window.removeEventListener("keypress", introSwitch)
+                this.addKeyListeners()
+            }
+            })
+        }
+
 
     recordKeys(e) {
         if (this.recording) {
@@ -37,6 +100,13 @@ export default class KeyDownHandler {
         this.durations.push(timeNow)
     }};
 
+    playBackCheck() {
+        document.querySelector("#play-button").style.filter = "brightness(60%)"
+        if (!this.durations.length) {
+            document.querySelector("#play-button").style.filter = "brightness(100%)";
+        } else {this.playBack()}
+    }
+
     playBack() {
         let refNum = this.durations.length
         this.durations.shift()
@@ -50,6 +120,11 @@ export default class KeyDownHandler {
                 this.playSwitch(key)
             }, time)
         }
+        document.querySelector("#play-button").style.filter = "brightness(100%)"
+    }
+
+    instSwitch(e) {
+
     }
 
     playSwitch(e) {
@@ -228,15 +303,39 @@ export default class KeyDownHandler {
         let shift = this.background_colors.shift()
         this.background_colors.push(shift)
         this.context.fillStyle = this.background_colors[0]
-        this.context.fillRect(0, 0, 1920, 1080) 
-        this.context.save()
+        switch(this.context.fillStyle) {
+            case "#95c88c":
+                console.log('case1')
+                this.body.style.backgroundColor = "#d1f0c8"
+                this.context.fillRect(0, 0, 1920, 1080) 
+                this.context.save()
+                break;
+            case "#967bb6":
+                console.log('case2')
+                this.body.style.backgroundColor = "#f0c8d1"
+                this.context.fillRect(0, 0, 1920, 1080) 
+                this.context.save()
+                break; 
+            case "#A7C7E7":
+                console.log('case3')
+                this.body.style.backgroundColor = "#f0e7c8"
+                this.context.fillRect(0, 0, 1920, 1080) 
+                this.context.save()
+                break; 
+            case "#FF6961":
+                console.log('case4')
+                this.body.style.backgroundColor = "#d3c8f0"
+                this.context.fillRect(0, 0, 1920, 1080) 
+                this.context.save()
+                break;
+        }
     }
 
     resetCanvas() {
         this.context.resetTransform()
     }
 
-    addListeners() {
+    addKeyListeners() {
      window.addEventListener('keydown', e => {
         e.preventDefault()
         e.stopImmediatePropagation()  
