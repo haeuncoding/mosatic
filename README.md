@@ -13,45 +13,24 @@ In Mosatic, users will be able to:
 - Be able to create a cohesive animation using their keystrokes.
 - They will be able to layer sounds and animations.
 
-# Wireframe:
-![Rough Wireframe](https://github.com/haeuncreative/mosatic/blob/master/js_rough_wf.png?raw=true)
+# How to Use (or Play):
+All 26 alphabetical keys are mapped to an animation and audiobyte. Press one to trigger it. If you would like to record your masterpiece, press the record button at the bottom. It will darken, indicating that Mosatic is armed for recording. When are you finished recording, simply click the record button again, and it will lighten - indicating that Mosatic is no longer armed for recording. Then click play to playback what you've just created!
 
 # Tech/Libraries/APIs
 
 - Web Audio API
   - https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/
-- Three JS
-  - https://threejs.org/
-- Audio Effects
-  - https://www.npmjs.com/package/audio-effects
 - Keyboard Event
   - https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code
+- Sounds made with FL Studio, and the following synths and VSTs:
+      - Serum 
+      - Lokomotiv (free)
+      - Digits (free)
+      - ValhallaDSP SuperMassive (free)
+      - ValhallaDSP FreqModulator (free)
 
-# Timeline:
-
-- Friday
-  - Setting Up Logic/Event Handlers
-- Saturday
-  - Setting Up Recording/Playback Logic
-  - Making sure sounds and graphics can overlap
-- Sunday
-  - Canvas animation logic  
-  - Debugging
-  - Making sure everything is working thus far.
-- Monday
-  - Sound creation 
-    - Chords and Percussive Textures
-  - Verify everything is going smoothly
-  - Debug if need to
-  - See if sounds overlap without oversaturating gain
-- Tuesday
-  - CSS and implementing animation
-  - Testing everything
-- Wednesday
-  - Final testing
-    - Double/triple check everything
-    - Abuse all the controls to make sure there's no bugs
-    - Make sure it's all visually pleasing.
-- Thursday
-  - If need be, do last checks, little tweaks before presenting.
+# To-Do
+- Implement pause and stop functions.
+- Implement reverb option with wet/dry mix.
+- The play function can only play a recording once, in the future it will be able to playback until the user has decided to delete the recording queue.
 
