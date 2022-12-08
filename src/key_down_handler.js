@@ -86,7 +86,7 @@ export default class KeyDownHandler {
     recordKeys(e) {
         if (this.recording) {
             this.keys.push(e)
-            console.log(this.keys)
+            // console.log(this.keys)
             this.getTimestampsMS()
         }
     }
