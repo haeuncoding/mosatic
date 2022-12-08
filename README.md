@@ -3,8 +3,7 @@
 Mosatic is a Javascript app that allows users to create pleasant and fun music with just their computer keyboard.
 
 # Live Link
-
-[Mosatic Live Link](haeuncreative.github.io/mosatic)
+[Mosatic Live Link](https://haeuncreative.github.io/mosatic/)
 
 # Background
 
