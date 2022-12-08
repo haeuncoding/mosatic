@@ -1,4 +1,4 @@
-# Mosatic
+![mosatic splash](https://github.com/haeuncreative/mosatic/blob/state-three/read_me_imgs/Mosatic_Splash.png)
 
 Mosatic is a Javascript app that allows users to create pleasant and fun music with just their computer keyboard.
 
@@ -15,6 +15,7 @@ In Mosatic, users will be able to:
 
 # How to Use (or Play):
 All 26 alphabetical keys are mapped to an animation and audiobyte. Press one to trigger it. If you would like to record your masterpiece, press the record button at the bottom. It will darken, indicating that Mosatic is armed for recording. When are you finished recording, simply click the record button again, and it will lighten - indicating that Mosatic is no longer armed for recording. Then click play to playback what you've just created!
+![mosatic interface](https://github.com/haeuncreative/mosatic/blob/state-three/read_me_imgs/Mosatic%20Diagram.png)
 
 # Tech/Libraries/APIs
 
