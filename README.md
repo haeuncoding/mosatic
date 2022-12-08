@@ -4,7 +4,7 @@ Mosatic is a Javascript app that allows users to create pleasant and fun music w
 
 # Background
 
-This music app is a way for anyone to make music, with preprogrammed chords and percussive elements that are mapped to keys on a keyboard. It will feature a variety of sounds, though it will be focused on more soothing and calming sounds, as well as more “cute” sounds. Each key, in addition, will have animations associated with it as well. The app will also feature a recording aspect where it will take note of keystrokes, as well as the length of time between each keystroke. It will replay the animation associated with each key, as well as the sounds.
+This music app is a way for anyone to make music, with preprogrammed chords and percussive elements that are mapped to keys on a keyboard. Inspired by Lullatone's Patatap and Typatone, as well as the playful audio aesthetics of Chase Bliss and digdugDIY, it will feature a variety of sounds, though it will be focused on more soothing and calming sounds, with a bit of playfulness in between. Each key, in addition, will have animations associated with it as well. The app will also feature a recording aspect where it will take note of keystrokes, as well as the length of time between each keystroke. It will replay the animation associated with each key, as well as their sounds.
 
 # Functionality & MVPs
 In Mosatic, users will be able to:
