@@ -75,8 +75,9 @@ export default class KeyDownHandler {
             this.introSwitch()
             if (this.currentSlide === this.intro4) {
                 this.currentSlide.style.display = "none"
-                window.removeEventListener("keypress", introSwitch)
+                window.removeEventListener("keypress", this.introSwitch)
                 this.addKeyListeners()
+
             }
         })
     }
