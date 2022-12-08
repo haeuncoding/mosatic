@@ -9,9 +9,12 @@ body {
 }
 
 .main {
-    padding-top: 3vw;
+    // padding-top: 1vw;
+    // padding-bottom: 1vw;
     text-align: center;
+    scale: 85%;
     align-content: space-around;
+    object-fit: contain;
 }
 
 .play-screen {
@@ -25,12 +28,6 @@ body {
     margin: 5px 0;
 }
 
-// .audio-controls {
-//     display: flex;
-//     justify-content: center;
-//     align-content: space-around;
-// }
-
 .header {
     display: flex;
     // text-align: center;
@@ -38,12 +35,6 @@ body {
     // margin: auto;
     align-content: space-between;
 }
-
-.header a {
-
-}
-
-
 
 .logo {
     height: auto;
@@ -96,40 +87,31 @@ body {
 
 .audio-controls {
     font-family: "Poppins", sans-serif;
-    max-width: 40vw;
+    max-width: 70vw;
     font-size: 20px;
     text-align: center;
     align-content: space-around;
     margin: auto;
-    // flex-flow: row;
-    // flex-basis: 50%;
-    // margin-left: 20px;
+
 }
 .playback-controls div {
     display: inline-block;
     width: 15%;
 }
 .audio-controls img, .audio-controls div img {
-    min-width: 1vw;
-    max-width: 1vw;
+    min-width: 1.5vw;
+    max-width: 1.5vw;
     max-height: max-content;
     margin-left: 0.1vw;
     margin-right: 0.1vw;
 }
 
-// .mute-sound {
-//     justify-content: flex-end;
-// }
-
 .audio-controls #sound-button {
-//     min-width: 6%;
-//     max-width: 10%;
     display: none;
 }
 
 .audio-controls #mute-button {
-//     min-width: 6%;
-//     max-width: 10%;
+
     display: inherit;
 }
 
@@ -140,7 +122,7 @@ body {
 }
 
 #background, #intro1, #intro2a, #intro2b, #intro2c, #intro3, #intro4 {
-    // position: absolute;
+    background-color: #8781bd;
 }
 #background {
     // visibility: hidden;
@@ -217,19 +199,19 @@ body {
 }
 
 @keyframes wiggle {
-    0% { transform: rotate(0deg), scale(100%)}
-    14% { transform: scale(110%)}
-    20% { transform: scale(105%)}
-    24% { transform: rotate(-5deg);}
-    28% { transform: rotate(5deg);}
-    32% { transform: rotate(-5deg);}
-    36% { transform: rotate(5deg);}
-    30% { transform: rotate(-5deg);}
-    44% { transform: rotate(0deg);}
-    48% { transform: scale(105%);}
-    54% { transform: scale(105%);}
-    70% { transform: scale(100%)}
-    100% {  transform: scale(100%); }
+    0% { transform: rotate(0deg), scale(100%) }
+    14% { transform: scale(110%) }
+    20% { transform: scale(105%) }
+    24% { transform: rotate(-5deg); }
+    28% { transform: rotate(5deg); }
+    32% { transform: rotate(-5deg); }
+    36% { transform: rotate(5deg); }
+    30% { transform: rotate(-5deg); }
+    44% { transform: rotate(0deg); }
+    48% { transform: scale(105%); }
+    54% { transform: scale(105%); }
+    70% { transform: scale(100%); }
+    100% { transform: scale(100%); }
 }
 
 @keyframes zoomies {

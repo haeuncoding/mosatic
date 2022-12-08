@@ -11,9 +11,10 @@ body {
 }
 
 .main {
-  padding-top: 3vw;
   text-align: center;
+  scale: 85%;
   align-content: space-around;
+  object-fit: contain;
 }
 
 .play-screen {
@@ -81,7 +82,7 @@ body {
 
 .audio-controls {
   font-family: "Poppins", sans-serif;
-  max-width: 40vw;
+  max-width: 70vw;
   font-size: 20px;
   text-align: center;
   align-content: space-around;
@@ -94,8 +95,8 @@ body {
 }
 
 .audio-controls img, .audio-controls div img {
-  min-width: 1vw;
-  max-width: 1vw;
+  min-width: 1.5vw;
+  max-width: 1.5vw;
   max-height: max-content;
   margin-left: 0.1vw;
   margin-right: 0.1vw;
@@ -113,6 +114,10 @@ body {
   cursor: pointer;
   transition: 0.5s;
   filter: brightness(60%);
+}
+
+#background, #intro1, #intro2a, #intro2b, #intro2c, #intro3, #intro4 {
+  background-color: #8781bd;
 }
 
 #background {

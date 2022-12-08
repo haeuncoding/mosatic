@@ -15,7 +15,7 @@ export default class ClickHandler {
         // buttons
         this.recButton = document.querySelector("#record-button")
         this.playButton = document.querySelector("#play-button")
-        this.pauseButton = document.querySelector("#pause-button")
+        // this.pauseButton = document.querySelector("#pause-button")
         this.stopButton = document.querySelector("#stop-button")
         this.muteButton = document.querySelector("#mute-button")
         this.soundButton = document.querySelector("#sound-button")
@@ -24,7 +24,7 @@ export default class ClickHandler {
         // listeners
         this.addRecordListener()
         this.addPlayListener()
-        this.addPauseListener()
+        // this.addPauseListener()
         this.addStopListener()
         this.addMuteListener()
         this.addSoundListener()
@@ -138,6 +138,8 @@ export default class ClickHandler {
         // } else {
             this.pauseAll()
             this.resetAll()
+            this.keysDown.setCanvas()
+            this.keysDown.resetCanvas()
             this.keysDown.keys = [];
             this.keysDown.durations = [];
         
@@ -157,21 +159,21 @@ export default class ClickHandler {
         })
     }
 
-    playCheck () {
-        let flag = false
-        this.soundArr.forEach(sound => {
-            if (!sound.pause()) flag = true;
-        })
-        return flag;
-    }
+    // playCheck () {
+    //     let flag = false
+    //     this.soundArr.forEach(sound => {
+    //         if (!sound.pause()) flag = true;
+    //     })
+    //     return flag;
+    // }
 
-    addPauseListener() {
-     this.pauseButton.addEventListener('click', e => {
-        e.preventDefault()
-        e.stopImmediatePropagation()
-        this.hitPauseButton()
-    }
-    )}
+    // addPauseListener() {
+    //  this.pauseButton.addEventListener('click', e => {
+    //     e.preventDefault()
+    //     e.stopImmediatePropagation()
+    //     this.hitPauseButton()
+    // }
+    // )}
 
     resumeAll () {
         this.soundArr.forEach(sound => {
@@ -179,13 +181,13 @@ export default class ClickHandler {
         })
     }
 
-    hitPauseButton () {
-        if (this.playCheck()) {
-            this.pauseAll;
-        } else {
-            this.resumeAll;
-        }
-    }
+    // hitPauseButton () {
+    //     if (this.playCheck()) {
+    //         this.pauseAll;
+    //     } else {
+    //         this.resumeAll;
+    //     }
+    // }
 
     
     changeSoundState = function() {
