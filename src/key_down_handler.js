@@ -37,8 +37,6 @@ export default class KeyDownHandler {
         this.recording = false;
     }
 
-
-    
     introSwitch() {
         if (this.currentSlide) {
             this.currentSlide.style.animation = "fadeOut 1s"

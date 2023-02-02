@@ -10,7 +10,6 @@ export default class AudioBank {
         this.pauseWorkingQuestionMark = false
     }
 
-
     createAudioContext () {
         return new AudioContext
     }
