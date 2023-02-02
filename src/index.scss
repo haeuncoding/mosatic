@@ -56,6 +56,7 @@ body {
     display: flex;
     align-content: space-between;
     flex-direction: row;
+    transition: .5s;
 }
 
 .links img {
@@ -63,10 +64,13 @@ body {
     height: 2.0vw;
     padding-top: 1.4vw;
     margin-left: 2vw;
+    transition: .5s;
+    animation: zoomies 2s;
+    animation-fill-mode: backwards;
 }
 
 .links img:hover {
-    animation: zoomies 1s;
+    animation: zoomies 2s;
     animation-fill-mode: forwards;
     cursor: pointer;
     transition: .5s;

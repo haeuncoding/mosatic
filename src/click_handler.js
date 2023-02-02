@@ -67,21 +67,18 @@ export default class ClickHandler {
     }
 
     hitMuteButton() {
-        console.log('bro')
         if (this.muteButton.style.display === "inherit") {
             // audio.muted = true;
             this.muteAll()
             this.soundButton.style.display = "inherit"
             this.muteButton.style.display ="none"
-            console.log('whaddup')
-            console.log(this.muteFunction.class)
+            // console.log(this.muteFunction.class)
         } else {
             // audio.muted = false
             this.unmuteAll()
             this.soundButton.style.display = "none"
             this.muteButton.style.display ="inherit"
-            console.log("i'm dying, it feels like a dream")
-            console.log(this.muteFunction.class)
+            // console.log(this.muteFunction.class)
         }
     }
 
@@ -90,8 +87,8 @@ export default class ClickHandler {
         e.preventDefault()
         e.stopImmediatePropagation()
         this.hitRecordButton()
-        console.log(this.keysDown.recording)
-        console.log(this.keysDown.keys)
+        // console.log(this.keysDown.recording)
+        // console.log(this.keysDown.keys)
     }
     )}
 
@@ -122,8 +119,8 @@ export default class ClickHandler {
      this.stopButton.addEventListener('click', e => {
         e.preventDefault()
         e.stopImmediatePropagation()
-        console.log(this.keysDown.keys)
-        console.log(this.keysDown.durations)
+        // console.log(this.keysDown.keys)
+        // console.log(this.keysDown.durations)
         this.hitStopButton()
     }
     )}
@@ -142,8 +139,8 @@ export default class ClickHandler {
             this.keysDown.keys = [];
             this.keysDown.durations = [];
         
-        console.log(this.keysDown.keys)
-        console.log(this.keysDown.durations)
+        // console.log(this.keysDown.keys)
+        // console.log(this.keysDown.durations)
     }
 
     resetAll () {

@@ -2,10 +2,11 @@ import AudioBank from './audio_bank.js'
 import AniBank from './ani_bank.js';
 
 let CONSTANTS = {
-    KEY_ALPHABET: Array.from('QWERTYUIOPASDFGHJKLZXCVBNM')
+    KEY_ALPHABET: Array.from('QWERTYUIOPASDFGHJKLZXCVBNM').concat('SPACE')
 }
 export default class KeyDownHandler {
     constructor() {
+        this.addPressListener()
         // audio
         this.soundBank = new AudioBank
         this.soundBank.createBank(CONSTANTS.KEY_ALPHABET)
@@ -24,7 +25,7 @@ export default class KeyDownHandler {
             this.intro3,
             this.intro4
         ]
-        this.addPressListener()
+
         // visual // main
         this.body = document.querySelector('body')
         this.canvas = document.querySelector('canvas');
@@ -38,6 +39,7 @@ export default class KeyDownHandler {
     }
 
     introSwitch() {
+        this.soundBank.playSpace() 
         if (this.currentSlide) {
             this.currentSlide.style.animation = "fadeOut 1s"
             this.currentSlide.style.display = "none"
@@ -47,7 +49,6 @@ export default class KeyDownHandler {
             slide.style.display = "none"
             this.introFinish = true
         }
-        console.log(this.introBank)
         if (this.introBank.length) {
             let slide = (this.introBank.shift())
             slide.style.filter = "brightness(60%)"
@@ -84,7 +85,6 @@ export default class KeyDownHandler {
     recordKeys(e) {
         if (this.recording) {
             this.keys.push(e)
-            // console.log(this.keys)
             this.getTimestampsMS()
         }
     }
@@ -121,6 +121,7 @@ export default class KeyDownHandler {
     playSwitch(e) {
         switch(e.code) {        
         case "Space":
+                this.soundBank.playSpace()
                 this.resetCanvas()
                 this.setCanvas()
             break;
@@ -328,6 +329,7 @@ export default class KeyDownHandler {
         e.stopImmediatePropagation()  
         switch(e.code) {        
         case "Space":
+            this.soundBank.playSpace() 
             this.resetCanvas()
             this.setCanvas()
         break;

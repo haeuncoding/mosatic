@@ -1,5 +1,5 @@
 let CONSTANTS = {
-    KEY_ALPHABET: Array.from('QWERTYUIOPASDFGHJKLZXCVBNM')
+    KEY_ALPHABET: Array.from('QWERTYUIOPASDFGHJKLZXCVBNM').concat('SPACE')
 }
 
 export default class AudioBank {
@@ -11,7 +11,7 @@ export default class AudioBank {
     }
 
     createAudioContext () {
-        return new AudioContext
+        return new AudioContext()
     }
 
     createAudioSource (letter) {
@@ -37,9 +37,11 @@ export default class AudioBank {
                 let ctx = this.createAudioContext()
                 // console.log(ctx)
                 // console.log('audio context created')
+                
                 let source = this.createAudioSource(letter)   
                 // console.log(source)     
                 // console.log('audio source created')
+                
                 let sound = this.createAudioSound(ctx, source)
                 // console.log(sound)
                 // console.log('audio sound created')
@@ -162,6 +164,12 @@ export default class AudioBank {
 
     playM () {
         this.handleAudio(this.coreAudioBank['M'].source)
+    }
+
+    // space
+
+    playSpace () {
+        this.handleAudio(this.coreAudioBank['SPACE'].source)
     }
 
 }

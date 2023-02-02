@@ -50,7 +50,6 @@ Playback and Recording:
 recordKeys(e) {
     if (this.recording) {
         this.keys.push(e)
-        // console.log(this.keys)
         this.getTimestampsMS()
     }
 }
