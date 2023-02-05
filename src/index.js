@@ -16,7 +16,6 @@ if (document.readyState === "interactive") {
         context.fillRect(0, 0, 1000, 562.5)
         
         const clickDown = new ClickHandler(keysDown)
-        
         }
     );
 }
