@@ -35,16 +35,13 @@ export default class AudioBank {
     createBank (array) {
         array.forEach(letter => {
                 let ctx = this.createAudioContext()
-                // console.log(ctx)
-                // console.log('audio context created')
+                // audio context created
                 
                 let source = this.createAudioSource(letter)   
-                // console.log(source)     
-                // console.log('audio source created')
+                // audio source created
                 
                 let sound = this.createAudioSound(ctx, source)
-                // console.log(sound)
-                // console.log('audio sound created')
+                // audio sound created
                 this.coreAudioBank[letter] = {
                     ctx: ctx,
                     source: source, 

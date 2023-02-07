@@ -5,7 +5,6 @@ import ClickHandler from './click_handler.js'
 
 if (document.readyState === "interactive") {
     const allAudio = document.querySelectorAll("audio")
-    console.log(allAudio)
     if (allAudio.entries(audio => (audio.readyState === 4)))
     window.addEventListener('load', function() {
         const keysDown = new KeyDownHandler()

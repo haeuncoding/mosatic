@@ -52,7 +52,6 @@ export default class KeyDownHandler {
         if (this.introBank.length) {
             let slide = (this.introBank.shift())
             slide.style.filter = "brightness(60%)"
-            console.log(slide)
             if (slide === this.intro4 || !slide) {
                 this.canvas.style.display = "flex";
                 this.addKeyListeners()
@@ -286,7 +285,7 @@ export default class KeyDownHandler {
             this.resetCanvas()
         break;
         default:
-            console.log('whoopsies!')
+
         break;
         }
     }
